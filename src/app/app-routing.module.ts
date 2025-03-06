@@ -46,6 +46,7 @@ import { DedicatedEngComponent } from './components/pages/dedicated-eng/dedicate
 import { IosEssentialComponent } from './components/pages/ios-essential/ios-essential.component';
 import { IosTechnicalComponent } from './components/pages/ios-technical/ios-technical.component';
 import { AppleBusinessComponent } from './components/pages/apple-business/apple-business.component';
+import { ServiceComponent } from './components/pages/service/service.component';
 
 const routes: Routes = [
     {path: 'home-one', component: HomeOneComponent},
@@ -94,6 +95,8 @@ const routes: Routes = [
     {path: 'ios-essential', component: IosEssentialComponent},
     {path: 'ios-technical', component: IosTechnicalComponent},
     {path: 'apple-business', component: AppleBusinessComponent},
+    {path: 'service', component: ServiceComponent},
+
 
 
     // Here add new pages component

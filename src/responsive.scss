@@ -1206,11 +1206,15 @@
 
             .navbar {
                 position: relative;
+                padding: 0px;
     
                 .collapse {
                     margin-top: 15px;
                     max-height: 70vh;
                     overflow-y: scroll;
+                    background: var(--greyColor);
+                    padding: 10px;
+                    border-radius: 5px;
                 }
                 .navbar-nav {
                     .nav-item {
@@ -1221,10 +1225,14 @@
                             opacity: 1;
                             visibility: visible;
                             margin-top: 18px;
+                            border-radius: 5px;
                         }
                     }
                 }
             }
+        }
+        .main-nav.sticky {
+            background-color: var(--whiteColor) !important;
         }
         .navbar-brand {
             &.d-none {
@@ -1243,6 +1251,7 @@
             box-shadow: unset;
             border: none;
             padding: 0;
+            border-radius: 5px;
 
             .burger-menu {
                 cursor: pointer;
@@ -1252,7 +1261,7 @@
                     width: 30px;
                     margin: 6px 0;
                     display: block;
-                    background: var(--mainColor);
+                    background: var(--greyColor);
                 }
             }
         }
@@ -1394,3 +1403,19 @@
         transform: rotate(-30deg);
     }
 }
+
+
+@media (max-width: 767px) {
+    .slider-area-2 .home-slider .single-slider {
+      height: auto;
+    //   padding-top: 100px;
+      padding-bottom: 100px;
+    }
+    .slider-area-2 .home-slider .slider-content h1 {
+      font-size: 28px;
+    }
+    .slider-area-2 .home-slider .slider-btn .box-btn {
+      margin: 10px 0;
+    }
+  }
+  
