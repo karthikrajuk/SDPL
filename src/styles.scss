@@ -5306,3 +5306,43 @@ Banner Area Three Style
 //     transform: none;
 //     border: none;
 // }
+
+.image-wrapper {
+    position: relative;
+    display: inline-block;
+    width: 350px; /* Set square size */
+    height: 350px;
+    margin: auto;
+  }
+  
+  .image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;     
+    position: relative;
+    z-index: 2;
+  }
+  
+  /* Background Shapes */
+  .background-shape {
+    position: absolute;
+    width: 105%;
+    height: 105%;
+    border-radius: 20%;
+    z-index: 1;
+  }
+  
+  .shape1 {
+    background-color: #64b5f6; /* Light blue */
+    transform: rotate(-60deg);
+    z-index: 1;
+
+  }
+  
+  .shape2 {
+    background-color: #9ed8c9; /* Light green */
+    transform: rotate(-40deg);
+    z-index: 2;
+
+  }
+  
