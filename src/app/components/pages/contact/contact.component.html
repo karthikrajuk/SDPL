@@ -19,7 +19,7 @@
     </div>
 </div>
 
-<section class="contact-area pt-100 pb-70">
+<!-- <section class="contact-area pt-100 pb-70">
     <div class="container">
         <div class="row">
             <div class="col-lg-4 col-sm-6">
@@ -62,7 +62,7 @@
             </div>
         </div>
     </div>
-</section>
+</section> -->
 
 <section class="home-contact-area home-2-contact ptb-100">
     <div class="container">
@@ -98,12 +98,15 @@
                                 </div>
                             </div>
 
-                            <div class="col-lg-12">
+                            <div class="col-lg-12 col-sm-12">
                                 <div class="form-group">
                                   <select formControlName="device" class="form-control">
                                     <option value="" disabled selected>Select Device</option>
                                     <option *ngFor="let device of devices" [value]="device">{{ device }}</option>
                                   </select>
+                                  <div>
+                                    Please select a device.
+                                  </div>
                                 </div>
                               </div>
 

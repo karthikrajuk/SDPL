@@ -1202,7 +1202,7 @@
         .main-nav {
             position: relative !important;
             top: 0 !important;
-            background-color: var(--greyColor);
+            background-color: var(--whiteColor);
 
             .navbar {
                 position: relative;
@@ -1252,7 +1252,7 @@
                     width: 30px;
                     margin: 6px 0;
                     display: block;
-                    background: var(--whiteColor);
+                    background: var(--mainColor);
                 }
             }
         }
@@ -1312,6 +1312,10 @@
       .shape2 {
         transform: rotate(-40deg);
       }
+
+      .header-area {
+        display: none;
+    }
 }
 
 @media only screen and (min-width: 576px) and (max-width: 767px) {
