@@ -21,7 +21,22 @@ export class FooterComponent implements OnInit {
         'assets/images/marquee/honeywell-logo.png',
         'assets/images/marquee/jebra-logo.png',
         'assets/images/marquee/poly-logo.png',
-        'assets/images/marquee/stm-logo.png'
+        'assets/images/marquee/stm-logo.png',
+        'assets/images/marquee/jamf-logo.png',
+        'assets/images/marquee/samsung-logo.png',
+        'assets/images/marquee/lg-logo.png',
+        'assets/images/marquee/jumpcloud-logo.png',
+        'assets/images/marquee/seagate-logo.png',
+        'assets/images/marquee/sure-logo.png',
+        'assets/images/marquee/kingston-logo.png',
+        'assets/images/marquee/bose-logo.png',
+        'assets/images/marquee/corsair.png',
+        'assets/images/marquee/adobe-logo.png',
+        'assets/images/marquee/microsoft-logo.png',
+        'assets/images/marquee/kandgi-logo.png',
+        'assets/images/marquee/vmware-logo.png',
+
+
       ];
 
       devices = ['MacBook Air',

@@ -8,9 +8,16 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
 })
 export class AboutComponent implements OnInit {
 
+serviceLocations: number = 0;
+  happyCustomers: number = 0;
+  salesSupport: number = 0;
     constructor() { }
 
-    ngOnInit(): void {}
+    ngOnInit() {
+		this.startCountUp('serviceLocations', 30);
+		this.startCountUp('happyCustomers', 1000);
+		this.startCountUp('salesSupport', 150);
+	  }
     
     clientWrap: OwlOptions = {
 		loop:true,
@@ -53,5 +60,20 @@ export class AboutComponent implements OnInit {
     closePopup(): void {
         this.isOpen = false;
     }
+
+	startCountUp(property: 'serviceLocations' | 'happyCustomers' | 'salesSupport', target: number) {
+		let count = 0;
+		let duration = 3000; // Animation duration in milliseconds
+		let intervalTime = duration / target;
+	
+		let interval = setInterval(() => {
+		  if (count < target) {
+			count++;
+			(this[property] as number) = count;
+		  } else {
+			clearInterval(interval);
+		  }
+		}, intervalTime);
+	  }
 
 }
