@@ -1119,7 +1119,7 @@
         <div class="row">
             <div class="col-lg-6 col-md-6">
                 <div class="content">
-                    <form id="contactForm">
+                    <form id="contactForm" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
                         <div class="row">
                             <div class="col-lg-12 col-sm-12">
                                 <div class="form-group">
@@ -1148,8 +1148,8 @@
                                     }
                                   </select> -->
                                   <select formControlName="device" class="form-control">
-                                    <option value="" disabled selected></option>
-                                    <option *ngFor="let device of devices" >
+                                    <option value="" disabled selected>Select Device</option>
+                                    <option *ngFor="let device of devices" [value]="device">
                                       {{ device }}
                                     </option>
                                   </select>

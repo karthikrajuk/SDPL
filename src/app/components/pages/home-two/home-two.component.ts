@@ -37,7 +37,7 @@ export class HomeTwoComponent implements OnInit {
         'assets/images/marquee/stm-logo.png'
       ];
 
-      devices = ['Select Device',
+      devices = [
         'MacBook Air',
         'MacBook Pro',
         'iMac',
