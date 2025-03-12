@@ -17,10 +17,13 @@ export class ContactComponent implements OnInit {
       email: ['', [Validators.required, Validators.email]],
       message: ['', [Validators.required]],
       phone: ['', [Validators.required]],
-      device: ['', [Validators.required]]
+      device: [null, [Validators.required]]
     });
   }
 
+  ngAfterViewInit() {
+    this.contactForm.patchValue({ device: null });
+  }
   devices = ['MacBook Air',
     'MacBook Pro',
     'iMac',

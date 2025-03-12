@@ -1141,9 +1141,17 @@
 
                             <div class="col-lg-12 col-sm-12">
                                 <div class="form-group">
+                                 <!--  <select formControlName="device" class="form-control">
+                                    <option value="" disabled selected>Select Device</option>
+                                    @for(device of devices; track devices){
+                                    <option >{{ device }}</option>
+                                    }
+                                  </select> -->
                                   <select formControlName="device" class="form-control">
-                                    <option value="" disabled selected class="form-control">Select Device</option>
-                                    <option *ngFor="let device of devices" [value]="device" class="form-control">{{ device }}</option>
+                                    <option value="" disabled selected></option>
+                                    <option *ngFor="let device of devices" >
+                                      {{ device }}
+                                    </option>
                                   </select>
                                   <div>
                                     Please select a device.

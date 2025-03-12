@@ -19,7 +19,7 @@ export class HomeTwoComponent implements OnInit {
           email: ['', [Validators.required, Validators.email]],
           message: ['', [Validators.required]],
           phone: ['', [Validators.required]],
-          device: [null]
+          device: ['']
         });
       }
 
@@ -37,7 +37,8 @@ export class HomeTwoComponent implements OnInit {
         'assets/images/marquee/stm-logo.png'
       ];
 
-      devices = ['MacBook Air',
+      devices = ['Select Device',
+        'MacBook Air',
         'MacBook Pro',
         'iMac',
         'Mac Mini', 
