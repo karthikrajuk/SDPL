@@ -36,6 +36,7 @@ export class NavbarComponent implements OnInit {
                 } else {
                     this.navbarClass = 'navbar-area';
                 }
+                this.classApplied = false;
             }
         });
     }
@@ -44,7 +45,7 @@ export class NavbarComponent implements OnInit {
 
     // Navbar Sticky
     isSticky: boolean = false;
-    @HostListener('window:scroll', ['$event'])
+    @HostListener('window:scroll', ['$event'] )
     checkScroll() {
         const scrollPosition = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
         if (scrollPosition >= 50) {
@@ -52,6 +53,10 @@ export class NavbarComponent implements OnInit {
         } else {
             this.isSticky = false;
         }
+    }
+
+    closeMenu() {
+        this.classApplied = false;
     }
 
 }
