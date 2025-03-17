@@ -48,6 +48,7 @@ import { IosTechnicalComponent } from './components/pages/ios-technical/ios-tech
 import { AppleBusinessComponent } from './components/pages/apple-business/apple-business.component';
 import { ServiceComponent } from './components/pages/service/service.component';
 import { RequestServiceComponent } from './components/pages/request-service/request-service.component';
+import { ActivityComponent } from './components/pages/activity/activity.component';
 
 const routes: Routes = [
     {path: 'home-one', component: HomeOneComponent},
@@ -98,6 +99,8 @@ const routes: Routes = [
     {path: 'apple-business', component: AppleBusinessComponent},
     {path: 'service', component: ServiceComponent},
     {path: 'request-service', component: RequestServiceComponent},
+    {path: 'activity', component: ActivityComponent},
+
 
     // Here add new pages component
 
