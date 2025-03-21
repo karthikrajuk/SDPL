@@ -384,7 +384,7 @@
 <section class="home-service-area pb-70">
     <div class="container">
         <div class="section-title">
-            <!-- <p>"Superior Digital: Expert Apple Device Support at Your Convenience"Experience certified expertise, genuine parts, and comprehensive services with tailored solutions for all your Apple device needs “</p> -->
+            <!-- <p>"Superior Digital: Expert Apple Device Support at Your Convenience"Experience certified expertise, genuine parts, and comprehensive services with tailored solutions for all your Apple device needs "</p> -->
             <h2 style="padding-top: 60px;">What we offer - </h2>
         </div>
 
@@ -658,7 +658,7 @@
     <div class="container">
         <div class="section-title">
             <!-- <span>Choose Aiva</span> -->
-            <h2>We Achieved People’s Trust by Our Great Service</h2>
+            <h2>We Achieved People's Trust by Our Great Service</h2>
             <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.</p> -->
         </div>
 
@@ -763,7 +763,7 @@
     <div class="container">
         <div class="section-title">
             <span>Testimonials</span>
-            <h2>What Our Client’s Say</h2>
+            <h2>What Our Client's Say</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A facilis vel consequatur tempora atque blanditiis exercitationem incidunt, alias corporis quam assumenda dicta.</p>
         </div>
         <div class="client-wrap">
@@ -975,7 +975,7 @@
                             <li>10 April 2024</li>
                             <li><a routerLink="/blog">By Admin</a></li>
                         </ul>
-                        <a routerLink="/blog-details"><h3>Joe’s Company Software Development Case</h3></a>
+                        <a routerLink="/blog-details"><h3>Joe's Company Software Development Case</h3></a>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas in fugit minima modi perspiciatis nam aspernatur porro</p>
                         <a routerLink="/blog-details" class="line-bnt">Read More</a>
                     </div>
@@ -1028,9 +1028,9 @@
 <section class="home-service-area pb-70 bg-color">
     <div class="container">
         <div class="section-title">
-            <!-- <p>"Superior Digital: Expert Apple Device Support at Your Convenience"Experience certified expertise, genuine parts, and comprehensive services with tailored solutions for all your Apple device needs “</p> -->
+            <!-- <p>"Superior Digital: Expert Apple Device Support at Your Convenience"Experience certified expertise, genuine parts, and comprehensive services with tailored solutions for all your Apple device needs "</p> -->
             <h2 style="padding-top: 60px;">Developer Program Benefits </h2>
-            <p>As a developer, purchasing an Apple device from Superior Digital means gaining more than just cutting-edge hardware—you’re entering a professional partnership. Enjoy exclusive benefits, including special purchase offers, on-premise support, and expert training to enhance your skills.</p>
+            <p>As a developer, purchasing an Apple device from Superior Digital means gaining more than just cutting-edge hardware—you're entering a professional partnership. Enjoy exclusive benefits, including special purchase offers, on-premise support, and expert training to enhance your skills.</p>
             <p>Gain priority access to Apple Developer Sessions and stay ahead with the latest innovations. We also provide Enterprise Connect support, ensuring seamless integration for your development needs. Elevate your Apple experience with tailored support and resources designed for developers!</p>
         </div>
 
@@ -1123,54 +1123,48 @@
                         <div class="row">
                             <div class="col-lg-12 col-sm-12">
                                 <div class="form-group">
-                                    <input type="text" name="name" id="name" class="form-control" required placeholder="Your Name" />
+                                    <input type="text" formControlName="name" class="form-control" required placeholder="Your Name" />
                                 </div>
                             </div>
 
                             <div class="col-lg-12 col-sm-12">
                                 <div class="form-group">
-                                    <input type="email" name="email" id="email" class="form-control" required placeholder="Your Email" />
+                                    <input type="email" formControlName="email" class="form-control" required placeholder="Your Email" />
                                 </div>
                             </div>
 
                             <div class="col-lg-12 col-sm-12">
                                 <div class="form-group">
-                                    <input type="text" name="phone_number" id="phone_number" required class="form-control" placeholder="Your Phone" />
+                                    <input type="text" formControlName="phone" class="form-control" required placeholder="Your Phone" />
                                 </div>
                             </div>
 
                             <div class="col-lg-12 col-sm-12">
                                 <div class="form-group">
-                                 <!--  <select formControlName="device" class="form-control">
-                                    <option value="" disabled selected>Select Device</option>
-                                    @for(device of devices; track devices){
-                                    <option >{{ device }}</option>
-                                    }
-                                  </select> -->
-                                  <select formControlName="device" class="form-control">
-                                    <option value="" disabled selected>Select Device</option>
-                                    <option *ngFor="let device of devices" [value]="device">
-                                      {{ device }}
-                                    </option>
-                                  </select>
-                                  <div>
-                                    Please select a device.
-                                  </div>
+                                    <select formControlName="device" class="form-control">
+                                        <option value="" disabled selected>Select Device</option>
+                                        <option *ngFor="let device of devices" [value]="device">{{ device }}</option>
+                                    </select>
                                 </div>
-                              </div>
+                            </div>
 
-                            <div class="col-lg-12 col-md-12">
+                            <div class="col-lg-12">
                                 <div class="form-group">
-                                    <textarea name="message" class="form-control" id="message" cols="30" rows="5" required placeholder="Your Message"></textarea>
-                                    <div>
-                                        Required for onsite Support.
-                                    </div>
+                                    <textarea formControlName="message" class="form-control" rows="5" required placeholder="Your Message"></textarea>
                                 </div>
                             </div>
+                        </div>
 
-                            <div class="col-lg-12 col-md-12">
-                                <button type="submit" class="default-btn page-btn box-btn">Submit</button>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="form-group">
+                                    <button type="submit" class="box-btn">Send Message</button>
+                                </div>
                             </div>
+                        </div>
+
+                        <div *ngIf="message" class="alert" [ngClass]="{'alert-success': message.includes('successfully'), 'alert-danger': message.includes('Error')}">
+                            {{ message }}
                         </div>
                     </form>
                 </div>

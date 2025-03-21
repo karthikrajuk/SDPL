@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { OwlOptions } from 'ngx-owl-carousel-o';
+import emailjs from '@emailjs/browser';
 
 @Component({
     selector: 'app-home-two',
@@ -21,7 +22,8 @@ export class HomeTwoComponent implements OnInit {
           phone: ['', [Validators.required]],
           device: ['']
         });
-      }
+        emailjs.init("PTmfxUAnOlAZlyhRB");
+    }
 
     ngOnInit(): void {}
 
@@ -157,18 +159,30 @@ export class HomeTwoComponent implements OnInit {
     }
 
     onSubmit() {
-        console.log(this.contactForm.value)
         if (this.contactForm.valid) {
-          this.http.post('http://localhost:4200/contact.php', this.contactForm.value)
-            .subscribe((response: any) => {
-              this.message = response.message;
-              console.log("message", this.message);
-              this.contactForm.reset();
-            }, error => {
-              this.message = 'Error sending message. Try again later.';
+            this.message = 'Sending message...';
+            
+            emailjs.send("service_kuiothp", "template_g8fkwgh", {
+                to_name: "SDPL",
+                from_name: this.contactForm.value.name,
+                email: this.contactForm.value.email,
+                phone: this.contactForm.value.phone,
+                device: this.contactForm.value.device,
+                message: this.contactForm.value.message,
+                reply_to: this.contactForm.value.email
+            })
+            .then((response) => {
+                this.message = 'Message sent successfully!';
+                this.contactForm.reset();
+                console.log('SUCCESS!', response.status, response.text);
+            }, (error) => {
+                this.message = 'Error sending message. Please try again later.';
+                console.error('FAILED...', error);
             });
+        } else {
+            this.message = 'Please fill in all required fields correctly.';
         }
-      }
+    }
     
     // Tabs
     currentTab = 'tab1';
@@ -177,13 +191,12 @@ export class HomeTwoComponent implements OnInit {
         this.currentTab = tab;
     }
 
-	// Video Popup
-	isOpen = false;
+    // Video Popup
+    isOpen = false;
     openPopup(): void {
         this.isOpen = true;
     }
     closePopup(): void {
         this.isOpen = false;
     }
-
 }
