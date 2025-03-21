@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import emailjs from '@emailjs/browser';
 
 @Component({
   selector: 'app-service',
@@ -23,6 +24,10 @@ export class ServiceComponent implements OnInit {
     });
   }
 
+  ngAfterViewInit() {
+    emailjs.init("PTmfxUAnOlAZlyhRB");
+  }
+
   devices = ['MacBook Air',
     'MacBook Pro',
     'iMac',
@@ -41,17 +46,23 @@ export class ServiceComponent implements OnInit {
   }
 
   onSubmit() {
-    console.log(this.contactForm.value)
     if (this.contactForm.valid) {
-      this.http.post('http://localhost:4200/contact.php', this.contactForm.value)
-        .subscribe((response: any) => {
-          this.message = response.message;
-          console.log("message", this.message);
+      emailjs.send("service_kuiothp", "template_xa36knk", {
+        to_name: "SDPL",
+        from_name: this.contactForm.value.name,
+        email: this.contactForm.value.email,
+        phone: this.contactForm.value.phone,
+        device: this.contactForm.value.device,
+        message: this.contactForm.value.message,
+        reply_to: this.contactForm.value.email,
+      })
+        .then((response) => {
+          this.message = 'Message sent successfully!';
           this.contactForm.reset();
-        }, error => {
+        })
+        .catch((error) => {
           this.message = 'Error sending message. Try again later.';
         });
     }
   }
-
 }
