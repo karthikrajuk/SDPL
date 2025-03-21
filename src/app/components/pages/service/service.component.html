@@ -136,7 +136,9 @@
                                     </div>
                                 </div>
                             </div>
-
+                            <div *ngIf="message" class="alert" [ngClass]="{'alert-success': message.includes('successfully'), 'alert-danger': message.includes('Error')}">
+                                {{ message }}
+                            </div>
                             <div class="col-lg-12 col-md-12">
                                 <button type="submit" class="default-btn page-btn box-btn">Submit</button>
                             </div>

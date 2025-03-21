@@ -2,11 +2,12 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import emailjs from '@emailjs/browser';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-service',
   standalone: true,
-  imports: [ReactiveFormsModule],
+  imports: [ReactiveFormsModule, CommonModule],
   templateUrl: './service.component.html',
   styleUrl: './service.component.scss'
 })
