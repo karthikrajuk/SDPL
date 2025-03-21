@@ -45,7 +45,7 @@ export class ContactComponent implements OnInit {
 
   onSubmit() {
     if (this.contactForm.valid) {
-      emailjs.send("service_kuiothp", "template_xa36knk", {
+      emailjs.send("service_kuiothp", "template_g8fkwgh", {
         to_name: "SDPL",
         from_name: this.contactForm.value.name,
         email: this.contactForm.value.email,
