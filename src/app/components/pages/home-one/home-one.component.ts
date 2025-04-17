@@ -12,6 +12,13 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
     styleUrls: ['./home-one.component.scss']
 })
 export class HomeOneComponent implements OnInit {
+    // currentTab: string = 'tab1';
+
+    currentTab = 'tab1';
+    switchTab(event: MouseEvent, tab: string) {
+        event.preventDefault();
+        this.currentTab = tab;
+    }
 
     constructor() { }
 
@@ -211,10 +218,31 @@ export class HomeOneComponent implements OnInit {
     }
     
     // Tabs
-    currentTab = 'tab1';
-    switchTab(event: MouseEvent, tab: string) {
-        event.preventDefault();
-        this.currentTab = tab;
+ 
+
+    
+
+  customOptions1: OwlOptions = {
+    loop: true,
+    margin: 30,
+    nav: true,
+    dots: true,
+    autoplay: true,
+    autoplayHoverPause: true,
+    responsive: {
+      0: {
+        items: 1
+      },
+      576: {
+        items: 2
+      },
+      768: {
+        items: 2
+      },
+      992: {
+        items: 3
+      }
     }
+  };
 
 }

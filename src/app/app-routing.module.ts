@@ -53,8 +53,8 @@ import { TrainingComponent } from './components/pages/training/training.componen
 import { DummyPageComponent } from './dummy-page/dummy-page.component';
 
 const routes: Routes = [
-    {path: 'home-one', component: HomeOneComponent},
-    {path: '', component: HomeTwoComponent},
+    {path: '', component: HomeOneComponent},
+    {path: 'home-two', component: HomeTwoComponent},
     {path: 'home-three', component: HomeThreeComponent},
     {path: 'about', component: AboutComponent},
     {path: 'solutions', component: SolutionsComponent},
