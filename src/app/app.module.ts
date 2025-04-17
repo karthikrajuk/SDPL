@@ -29,6 +29,7 @@ import { FaqComponent } from './components/pages/faq/faq.component';
 import { TermsConditionsComponent } from './components/pages/terms-conditions/terms-conditions.component';
 import { PrivacyPolicyComponent } from './components/pages/privacy-policy/privacy-policy.component';
 import { ContactComponent } from './components/pages/contact/contact.component';
+import { TrainingComponent } from './components/pages/training/training.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 
@@ -57,7 +58,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     FaqComponent,
     TermsConditionsComponent,
     PrivacyPolicyComponent,
-    ContactComponent
+    ContactComponent,
+    TrainingComponent
   ],
   imports: [
     BrowserModule,
