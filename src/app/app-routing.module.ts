@@ -50,6 +50,7 @@ import { ServiceComponent } from './components/pages/service/service.component';
 import { RequestServiceComponent } from './components/pages/request-service/request-service.component';
 import { ActivityComponent } from './components/pages/activity/activity.component';
 import { TrainingComponent } from './components/pages/training/training.component';
+import { DummyPageComponent } from './dummy-page/dummy-page.component';
 
 const routes: Routes = [
     {path: 'home-one', component: HomeOneComponent},
@@ -102,6 +103,7 @@ const routes: Routes = [
     {path: 'request-service', component: RequestServiceComponent},
     {path: 'activity', component: ActivityComponent},
     {path: 'training', component: TrainingComponent},
+    {path: 'dummy-page', component: DummyPageComponent},
 
     // Here add new pages component
 

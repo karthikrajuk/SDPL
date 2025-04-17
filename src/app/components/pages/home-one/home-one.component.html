@@ -1,40 +1,44 @@
-<section class="banner-area">
-    <div class="d-table">
-        <div class="d-table-cell">
-            <div class="container-fluid">
-                <div class="row align-items-center">
-                    <div class="col-lg-6">
-                        <div class="banner-content">
-                            <h1>Trusted Effective Service and Solutions</h1>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, et sed do eiusmod tempor incididunt labore dolore magna aliqua. Quis ipsum suspendisse.</p>
-                            <div class="banner-btn">
-                                <a routerLink="/contact" class="box-btn">Contact Us</a>
-                                <a routerLink="/about" class="box-btn border-btn">Know More</a>
+<section class="">
+    <owl-carousel-o [options]="customOptions">
+        <ng-container *ngFor="let slide of slides">
+            <ng-template carouselSlide [id]="slide.id">
+                <div class="d-table">
+                    <div class="d-table-cell">
+                        <div class="container-fluid">
+                            <div class="row align-items-center">
+                                <div class="col-lg-12" style="padding: 0 !important;">
+                                    <div class="banner-content" [style.background-image]="'url(' + slide.img + ')'">
+                                        <div class="banner-text">
+                                            <h1>{{slide.title}}</h1>
+                                            <p>{{slide.description1}}</p>
+                                            <p>{{slide.description2}}</p>
+                                            <p>{{slide.description3}}</p>
+                                            <div class="banner-btn">
+                                                <!-- <a routerLink="/contact" class="box-btn">Contact Us</a> -->
+                                                <a routerLink="{{slide.pageLink}}" class="box-btn border-btn">Know More</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-
-                    <div class="col-lg-6">
-                        <div class="banner-img">
-                            <img src="assets/images/home-bg-1-img.png" alt="banner-img" />
-                        </div>
-                    </div>
                 </div>
-            </div>
-        </div>
-    </div>
+            </ng-template>
+        </ng-container>
+    </owl-carousel-o>
 
-    <div class="home-shape">
+   <!--  <div class="home-shape">
         <div class="shape1"><img src="assets/images/shape/1.png" alt="shape"></div>
         <div class="shape2"><img src="assets/images/shape/2.png" alt="shape"></div>
         <div class="shape3"><img src="assets/images/shape/3.png" alt="shape"></div>
         <div class="shape4"><img src="assets/images/shape/4.png" alt="shape"></div>
         <div class="shape5"><img src="assets/images/shape/5.png" alt="shape"></div>
         <div class="shape6"><img src="assets/images/shape/6.png" alt="shape"></div>
-    </div>
+    </div> -->
 </section>
 
-<section class="home-service-area pt-100 pb-70">
+<section class="home-service-area pt-70 pb-70">
     <div class="container">
         <div class="section-title">
             <span>Smart Services</span>
@@ -159,7 +163,7 @@
     <div class="container">
         <div class="section-title">
             <span>Choose Aiva</span>
-            <h2>We Achieved People’s Trust by Our Great Service</h2>
+            <h2>We Achieved People's Trust by Our Great Service</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse.</p>
         </div>
 
@@ -296,7 +300,7 @@
                                 </div>
             
                                 <div class="content">
-                                    <a routerLink="/case-studies-details"><h3>Joe’s Company Software Development Case</h3></a>
+                                    <a routerLink="/case-studies-details"><h3>Joe's Company Software Development Case</h3></a>
                                     <p>Lorem ipsum dolor sit amet, coloni is to nsectetur adipiscing elit, sed do eiudvi smod tempor incididunt ipsum dolor.</p>
                                     <a routerLink="/case-studies-details" class="line-bnt">View Project Details</a>
                                 </div>
@@ -706,7 +710,7 @@
     <div class="container">
         <div class="section-title">
             <span>Testimonials</span>
-            <h2>What Our Client’s Say</h2>
+            <h2>What Our Client's Say</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A facilis vel consequatur tempora atque blanditiis exercitationem incidunt, alias corporis quam assumenda dicta.</p>
         </div>
         <div class="client-wrap">
@@ -752,7 +756,7 @@
                             <li>10 April 2024</li>
                             <li><a routerLink="/blog">By Admin</a></li>
                         </ul>
-                        <a routerLink="/blog-details"><h3>Joe’s Company Software Development Case</h3></a>
+                        <a routerLink="/blog-details"><h3>Joe's Company Software Development Case</h3></a>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas in fugit minima modi perspiciatis nam aspernatur porro</p>
                         <a routerLink="/blog-details" class="line-bnt">Read More</a>
                     </div>

@@ -38,7 +38,6 @@ import { ReactiveFormsModule } from '@angular/forms';
     AppComponent,
     NavbarComponent,
     FooterComponent,
-    HomeOneComponent,
     HomeTwoComponent,
     HomeThreeComponent,
     AboutComponent,
@@ -68,7 +67,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     BrowserAnimationsModule,
     NgxScrollTopModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    HomeOneComponent,
+
   ],
   providers: [],
   bootstrap: [AppComponent]
