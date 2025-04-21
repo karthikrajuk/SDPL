@@ -7,15 +7,16 @@
                         <div class="container-fluid">
                             <div class="row align-items-center">
                                 <div class="col-lg-12" style="padding: 0 !important;">
-                                    <div class="banner-content" [style.background-image]="'url(' + slide.img + ')'">
+                                    <div class="banner-content" [style.background-image]="'url(' + slide.img + ')'"
+                                        style="object-fit: contain;">
                                         <div class="banner-text">
                                             <h1>{{slide.title}}</h1>
                                             <p>{{slide.description1}}</p>
                                             <p>{{slide.description2}}</p>
                                             <p>{{slide.description3}}</p>
                                             <div class="banner-btn">
-                                                <!-- <a routerLink="/contact" class="box-btn">Contact Us</a> -->
-                                                <a routerLink="{{slide.pageLink}}" class="box-btn border-btn">Know More</a>
+                                                <a [href]="slide.pageLink" class="box-btn border-btn"
+                                                    target="_blank">Know More</a>
                                             </div>
                                         </div>
                                     </div>
@@ -28,7 +29,7 @@
         </ng-container>
     </owl-carousel-o>
 
-   <!--  <div class="home-shape">
+    <!--  <div class="home-shape">
         <div class="shape1"><img src="assets/images/shape/1.png" alt="shape"></div>
         <div class="shape2"><img src="assets/images/shape/2.png" alt="shape"></div>
         <div class="shape3"><img src="assets/images/shape/3.png" alt="shape"></div>
@@ -146,7 +147,7 @@
             <p>Backed by strong partnerships and a team of certified experts, we deliver more than just products—we deliver possibilities.</p>
             <p>Let's transform the way your business works, connects, and grows—together.</p>
           
-        </div>
+    </div>
       
         <div class="image-section">
           <img src="assets/images/gallery/1.jpg" alt="stats" class="office-image" width="70%" height="70%"/>
@@ -177,7 +178,7 @@
       </div>
       
 </section>
- 
+
 <section class="services-section">
     <div class="services-intro">
         <div class="intro-content">
@@ -195,7 +196,11 @@
                     </div>
                     <div class="card-content">
                         <h3>Apple Pre-Sales Expertise</h3>
-                        <p>Our expert team provides comprehensive pre-sales support to help you make informed decisions.</p>
+                        <p>We help you choose the right Apple devices with expert guidance tailored to your business needs and budget.
+                            Avoid overbuying and make smart, confident investments from the start.</p>
+                            <!-- <p>We guide you through product selection, configuration, and compatibility.
+                                Reduce risk, avoid overbuying, and invest smartly from the start.
+                                Make confident decisions backed by real Apple expertise.</p> -->
                         <a routerLink="/presales-support" class="learn-more">Know More »</a>
                     </div>
                 </div>
@@ -208,7 +213,9 @@
                     </div>
                     <div class="card-content">
                         <h3>Apple Demos & Proof of Concept Solutions</h3>
-                        <p>Experience our hands-on demonstrations and proof of concept solutions.</p>
+                        <p>Experience how Apple fits your business with live demos and custom proof of concepts.
+                            Test devices and workflows in your environment before you invest.</p>
+                        <!-- <p>We offer live demos and real-world proof of concepts customised to your needs.</p> -->
                         <a routerLink="/demo" class="learn-more">Know More »</a>
                     </div>
                 </div>
@@ -221,7 +228,8 @@
                     </div>
                     <div class="card-content">
                         <h3>Apple Device Trade-In Program</h3>
-                        <p>Upgrade your Apple devices with our convenient trade-in program.</p>
+                        <p>Easily upgrade with our Apple Trade-In program—get value for old devices toward new ones.
+                            Secure, eco-friendly, and seamless for single or fleet replacements.</p>
                         <a routerLink="/buy-back" class="learn-more">Know More »</a>
                     </div>
                 </div>
@@ -234,7 +242,8 @@
                     </div>
                     <div class="card-content">
                         <h3>Apple Services with Expert Onsite Support</h3>
-                        <p>Our certified technicians provide expert onsite support for all your devices.</p>
+                        <p>Get expert Apple support onsite or remotely—from setup to troubleshooting.
+                            Certified engineers ensure smooth performance, tailored to your team's needs.</p>
                         <a routerLink="/onsite-support" class="learn-more">Know More »</a>
                     </div>
                 </div>
@@ -247,7 +256,8 @@
                     </div>
                     <div class="card-content">
                         <h3>Strategic Partnerships with Leading Brands</h3>
-                        <p>We collaborate with top technology brands for comprehensive solutions.</p>
+                        <p>Apple is just the start—we integrate top brands like Logitech, Bose, and Jabra.
+                            Create complete, reliable solutions that boost productivity and performance.</p>
                         <a routerLink="/partnering" class="learn-more">Know More »</a>
                     </div>
                 </div>
@@ -260,7 +270,92 @@
                     </div>
                     <div class="card-content">
                         <h3>Tailored Apple Purchase Programs</h3>
-                        <p>Discover our customized purchase programs with flexible financing options.</p>
+                        <p>Every business is unique—our Apple purchase plans are too.
+                            Get flexible options, volume pricing, and financing tailored to your needs.</p>
+                        <a routerLink="/purchase-program" class="learn-more">Know More »</a>
+                    </div>
+                </div>
+            </ng-template>
+
+            <ng-template carouselSlide>
+                <div class="service-card">
+                    <div class="card-image">
+                        <img src="assets/images/case/m4.png" alt="Purchase">
+                    </div>
+                    <div class="card-content">
+                        <h3>Seamless Apple Deployment & Integration</h3>
+                        <p>Zero-touch Apple deployment with MDM and Business Manager—fast, secure, and seamless.
+                            Ideal for startups to enterprise scale-ups, with expert setup and minimal downtime.</p>
+                        <a routerLink="/purchase-program" class="learn-more">Know More »</a>
+                    </div>
+                </div>
+            </ng-template>
+
+            <ng-template carouselSlide>
+                <div class="service-card">
+                    <div class="card-image">
+                        <img src="assets/images/case/m4.png" alt="Purchase">
+                    </div>
+                    <div class="card-content">
+                        <h3>Apple Financing & Flexible Payment Plans</h3>
+                        <p>Empower your team with Apple tech through flexible leasing and financing.
+                            Enjoy predictable costs, easy upgrades, and stress-free scaling.</p>
+                        <a routerLink="/purchase-program" class="learn-more">Know More »</a>
+                    </div>
+                </div>
+            </ng-template>
+
+            <ng-template carouselSlide>
+                <div class="service-card">
+                    <div class="card-image">
+                        <img src="assets/images/case/m4.png" alt="Purchase">
+                    </div>
+                    <div class="card-content">
+                        <h3>Comprehensive Apple Maintenance & Support</h3>
+                        <p>End-to-end Apple support from certified engineers—onsite or remote.
+                            For updates, repairs, and more, we keep your Apple setup running smoothly.</p>
+                        <a routerLink="/purchase-program" class="learn-more">Know More »</a>
+                    </div>
+                </div>
+            </ng-template>
+
+            <ng-template carouselSlide>
+                <div class="service-card">
+                    <div class="card-image">
+                        <img src="assets/images/case/m4.png" alt="Purchase">
+                    </div>
+                    <div class="card-content">
+                        <h3>Custom Apple Training & Enablement</h3>
+                        <p>Boost productivity with tailored Apple training for users, creatives, and IT teams.
+                            Onsite or online, learn to create, collaborate, and troubleshoot like a pro.</p>
+                        <a routerLink="/purchase-program" class="learn-more">Know More »</a>
+                    </div>
+                </div>
+            </ng-template>
+
+            <ng-template carouselSlide>
+                <div class="service-card">
+                    <div class="card-image">
+                        <img src="assets/images/case/m4.png" alt="Purchase">
+                    </div>
+                    <div class="card-content">
+                        <h3>Apple Ecosystem Consulting</h3>
+                        <p>Align Apple devices, apps, and workflows with your business goals.
+                            From planning to deployment, we deliver secure, scalable solutions that work.</p>
+                        <a routerLink="/purchase-program" class="learn-more">Know More »</a>
+                    </div>
+                </div>
+            </ng-template>
+
+            <ng-template carouselSlide>
+                <div class="service-card">
+                    <div class="card-image">
+                        <img src="assets/images/case/m4.png" alt="Purchase">
+                    </div>
+                    <div class="card-content">
+                        <h3>Exclusive Apple Programs</h3>
+                        <p>Unlock exclusive Apple benefits for business and education through an authorised partner.
+                            Access tools, pricing, and support to grow and achieve more.</p>
                         <a routerLink="/purchase-program" class="learn-more">Know More »</a>
                     </div>
                 </div>
@@ -318,7 +413,7 @@
                         <li><i class="bx bx-badge-check"></i> Apple device enrolment via Apple Business Manager (ABM).</li>
                         <li><i class="bx bx-badge-check"></i> Basic MDM setup (e.g., Jamf or Mosyle) for device configuration and app distribution.</li>
                         <li><i class="bx bx-badge-check"></i> Essential security settings (passcode enforcement, encryption).</li>
-                        <li><i class="bx bx-badge-check"></i> Access to Superior’s financing options for device procurement.</li>
+                        <li><i class="bx bx-badge-check"></i> Access to Superior's financing options for device procurement.</li>
                         <li><i class="bx bx-badge-check"></i> 24/7 basic support and onboarding training.</li>
                         <!-- <li><i class="bx bx-badge-check"></i> Unlimited Domains</li> -->
                     </ul>
@@ -367,7 +462,7 @@
                     <ul>
                         <p>Features</p>
                         <li><i class="bx bx-badge-check"></i> Full-scale ABM and MDM deployment with custom profiles for department-specific needs</li>
-                        <li><i class="bx bx-badge-check"></i> Custom app development and integration via Superior’s developer partnerships</li>
+                        <li><i class="bx bx-badge-check"></i> Custom app development and integration via Superior's developer partnerships</li>
                         <li><i class="bx bx-badge-check"></i> Advanced security (endpoint protection, SSO, compliance reporting).</li>
                         <li><i class="bx bx-badge-check"></i> On-site deployment support and training across multiple locations in India.</li>
                         <li><i class="bx bx-badge-check"></i> Premium support with SLA-backed response times and lifecycle management services</li>
@@ -418,7 +513,7 @@
     </div>
 </section> -->
 
-<section class="home-process-area pt-100 pb-70">
+<!-- <section class="home-process-area pt-100 pb-70">
     <div class="container">
         <div class="section-title">
             <span>Working Process</span>
@@ -483,7 +578,7 @@
             </div>
         </div>
     </div>
-</section>
+</section> -->
 
 <section class="home-case ptb-100">
     <div class="container">

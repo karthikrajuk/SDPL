@@ -46,7 +46,7 @@ export class HomeOneComponent implements OnInit {
         },
         nav: true,
         autoplay: true,
-        autoplayTimeout: 3000,
+        autoplayTimeout: 5000,
         autoplayHoverPause: true
     }
 
@@ -67,7 +67,7 @@ export class HomeOneComponent implements OnInit {
             description1: 'Simplify management with industry-leading Mobile Device Management.',
             description2: 'Take control of every device—without leaving your desk.',
             description3: 'Secure, manage, and monitor Apple devices with advanced MDM integration.',
-            img: 'assets/images/authorized.png',
+            img: 'assets/images/mdm.png',
             alt: 'MDM Solutions',
             pageLink: '/mdm-solutions'
         },
@@ -77,7 +77,7 @@ export class HomeOneComponent implements OnInit {
             description1: 'Transform your spaces with professional AV solutions for clear communication.',
             description2: 'Make every meeting look and sound amazing.',
             description3: 'Smart AV integrations for seamless presentations and hybrid collaboration.',            
-            img: 'assets/images/it-training.png',
+            img: 'assets/images/AVsol1.jpeg',
             alt: 'Audio Video Setup',
             pageLink: '/audio-video-setup'
         },
@@ -87,9 +87,9 @@ export class HomeOneComponent implements OnInit {
             description1: 'Build fast, reliable, and secure networks tailored for your organisation.',
             description2: 'Say goodbye to weak Wi-Fi and tangled cables.',
             description3: 'Enterprise-grade networking built for speed, stability, and scale.',            
-            img: 'assets/images/approach.png',
+            img: 'assets/images/networking_banner.jpeg',
             alt: 'Networking Solutions',
-            pageLink: '/networking-solutions'
+            pageLink: 'https://superiorsystems.in/networking'
         },
         {
             id: 5,
@@ -97,7 +97,7 @@ export class HomeOneComponent implements OnInit {
             description1: 'Enable secure and seamless mobile workforces with Apple mobility solutions.',
             description2: 'Work from anywhere—securely and efficiently.',
             description3: 'Drive productivity on the move with mobile-first Apple ecosystem strategies.',            
-            img: 'assets/images/demo.png',
+            img: 'assets/images/mobilitybanner.png',
             alt: 'Mobility',
             pageLink: '/mobility'
         },
@@ -107,7 +107,7 @@ export class HomeOneComponent implements OnInit {
             description1: 'Flexible leasing plans to equip your teams without upfront investment.',
             description2: 'Upgrade without the upfront cost—lease the latest tech today.',
             description3: 'Scalable leasing models to stay future-ready and financially agile.',
-            img: 'assets/images/essilor.png',
+            img: 'assets/images/leasing.png',
             alt: 'Leasing Services',
             pageLink: '/leasing-services'
         },
@@ -117,7 +117,7 @@ export class HomeOneComponent implements OnInit {
             description1: 'Finance your Apple ecosystem with custom plans that fit your budget.',
             description2: 'Get the tech you need—pay the way that works for you.',
             description3: 'Smart financing options for seamless IT expansion and upgrades.',
-            img: 'assets/images/macos.png',
+            img: 'assets/images/financing.png',
             alt: 'Financing Solutions',
             pageLink: '/financing-solutions'
         }
@@ -161,7 +161,7 @@ export class HomeOneComponent implements OnInit {
 		dots: false,
 		autoHeight: true,
 		autoplay: true,
-		smartSpeed: 80000,
+		smartSpeed: 5000,
 		autoplayHoverPause: true,
 		center: false,
 		responsive:{
