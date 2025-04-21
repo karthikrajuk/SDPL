@@ -53,6 +53,12 @@ import { TrainingComponent } from './components/pages/training/training.componen
 import { DummyPageComponent } from './dummy-page/dummy-page.component';
 import { OurServicesComponent } from './components/pages/our-services/our-services.component';
 import { ProductsComponent } from './components/pages/products/products.component';
+import { AppleDeploymentComponent } from './components/pages/apple-deployment/apple-deployment.component';
+import { AppleFinancingComponent } from './components/pages/apple-financing/apple-financing.component';
+import { AppleMaintenanceComponent } from './components/pages/apple-maintenance/apple-maintenance.component';
+import { AppleTrainingComponent } from './components/pages/apple-training/apple-training.component';
+import { AppleEcosystemComponent } from './components/pages/apple-ecosystem/apple-ecosystem.component';
+import { AppleProgramComponent } from './components/pages/apple-program/apple-program.component';
 
 const routes: Routes = [
     {path: '', component: HomeOneComponent},
@@ -108,6 +114,12 @@ const routes: Routes = [
     {path: 'dummy-page', component: DummyPageComponent},
     {path: 'our-services', component: OurServicesComponent},
     {path: 'products', component: ProductsComponent},
+    {path: 'apple-deployment', component: AppleDeploymentComponent},
+    {path: 'apple-financing', component: AppleFinancingComponent},
+    {path: 'apple-maintenance', component: AppleMaintenanceComponent},
+    {path: 'apple-training', component: AppleTrainingComponent},
+    {path: 'apple-ecosystem', component: AppleEcosystemComponent},
+    {path: 'apple-program', component: AppleProgramComponent},
 
     // Here add new pages component
 
