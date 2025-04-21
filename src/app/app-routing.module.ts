@@ -66,6 +66,12 @@ import { MdmComponent } from './components/pages/mdm/mdm.component';
 import { AVSolutionsComponent } from './components/pages/avsolutions/avsolutions.component';
 import { MobilityComponent } from './components/pages/mobility/mobility.component';
 import { LeasingComponent } from './components/pages/leasing/leasing.component';
+import { MacbookProComponent } from './components/pages/macbook-pro/macbook-pro.component';
+import { Iphone16Component } from './components/pages/iphone16/iphone16.component';
+import { IpadAirComponent } from './components/pages/ipad-air/ipad-air.component';
+import { AirpodsMaxComponent } from './components/pages/airpods-max/airpods-max.component';
+import { Iphone16eComponent } from './components/pages/iphone16e/iphone16e.component';
+import { Iphone16proComponent } from './components/pages/iphone16pro/iphone16pro.component';
 
 const routes: Routes = [
     {path: '', component: HomeOneComponent},
@@ -134,6 +140,16 @@ const routes: Routes = [
     {path: 'avsolution', component: AVSolutionsComponent},
     {path: 'mobility', component: MobilityComponent},
     {path: 'leasing', component: LeasingComponent},
+    {path: 'macbook-pro', component: MacbookProComponent},
+    {path: 'iphone-16', component: Iphone16Component},
+    {path: 'ipad-air', component: IpadAirComponent},
+    {path: 'airpods-max', component: AirpodsMaxComponent},  
+    {path: 'iphone-16e', component: Iphone16eComponent},
+    {path: 'iphone-16pro', component: Iphone16proComponent},
+    
+    
+    
+    
     // Here add new pages component
 
     {path: '**', component: ErrorComponent} // This line will remain down from the whole pages component list
