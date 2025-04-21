@@ -33,10 +33,10 @@ import { TrainingComponent } from './components/pages/training/training.componen
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { OurServicesComponent } from './components/pages/our-services/our-services.component';
+
 @NgModule({
   declarations: [
     AppComponent,
-    NavbarComponent,
     FooterComponent,
     HomeTwoComponent,
     HomeThreeComponent,
@@ -70,7 +70,7 @@ import { OurServicesComponent } from './components/pages/our-services/our-servic
     ReactiveFormsModule,
     HttpClientModule,
     HomeOneComponent,
-
+    NavbarComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -3,24 +3,54 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { OwlOptions } from 'ngx-owl-carousel-o';
+import { HttpClient } from '@angular/common/http';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import emailjs from '@emailjs/browser';
+import { ReactiveFormsModule } from '@angular/forms';
+
 
 @Component({
     selector: 'app-home-one',
     standalone: true,
-    imports: [CommonModule, CarouselModule, RouterModule],
+    imports: [CommonModule, CarouselModule, RouterModule, ReactiveFormsModule],
     templateUrl: './home-one.component.html',
     styleUrls: ['./home-one.component.scss']
 })
 export class HomeOneComponent implements OnInit {
     // currentTab: string = 'tab1';
-
-    currentTab = 'tab1';
-    switchTab(event: MouseEvent, tab: string) {
+    contactForm: FormGroup;
+    message: string = '';
+    selectedDevice = ''; 
+    // currentTab = 'tab1';
+ /*    switchTab(event: MouseEvent, tab: string) {
         event.preventDefault();
         this.currentTab = tab;
     }
+ */
+    devices = [
+        'MacBook Air',
+        'MacBook Pro',
+        'iMac',
+        'Mac Mini', 
+        'Mac Studio', 
+        'Mac Pro', 
+        'iPad', 
+        'iPhone', 
+        'Apple Watch', 
+        'Airpods', 
+        'Other Accessories', 
+    ]; 
+    constructor(private fb: FormBuilder, private http: HttpClient) { 
+        this.contactForm = this.fb.group({
+            name: ['', [Validators.required]],
+            email: ['', [Validators.required, Validators.email]],
+            message: ['', [Validators.required]],
+            phone: ['', [Validators.required]],
+            device: ['']
+          });
+          emailjs.init("PTmfxUAnOlAZlyhRB");
 
-    constructor() { }
+    }
 
     customOptions: OwlOptions = {
         loop: true,
@@ -244,5 +274,47 @@ export class HomeOneComponent implements OnInit {
       }
     }
   };
+
+  onSubmit() {
+    if (this.contactForm.valid) {
+        this.message = 'Sending message...';
+        
+        emailjs.send("service_kuiothp", "template_g8fkwgh", {
+            to_name: "SDPL",
+            from_name: this.contactForm.value.name,
+            email: this.contactForm.value.email,
+            phone: this.contactForm.value.phone,
+            device: this.contactForm.value.device,
+            message: this.contactForm.value.message,
+            reply_to: this.contactForm.value.email
+        })
+        .then((response) => {
+            this.message = 'Message sent successfully!';
+            this.contactForm.reset();
+            console.log('SUCCESS!', response.status, response.text);
+        }, (error) => {
+            this.message = 'Error sending message. Please try again later.';
+            console.error('FAILED...', error);
+        });
+    } else {
+        this.message = 'Please fill in all required fields correctly.';
+    }
+}
+
+// Tabs
+currentTab = 'tab1';
+switchTab(event: MouseEvent, tab: string) {
+    event.preventDefault();
+    this.currentTab = tab;
+}
+
+// Video Popup
+isOpen = false;
+openPopup(): void {
+    this.isOpen = true;
+}
+closePopup(): void {
+    this.isOpen = false;
+}
 
 }

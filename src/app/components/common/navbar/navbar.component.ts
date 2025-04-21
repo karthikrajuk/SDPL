@@ -1,9 +1,12 @@
 import { Component, OnInit, HostListener } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
-import { Location, LocationStrategy, PathLocationStrategy } from '@angular/common';
+import { Location, LocationStrategy, PathLocationStrategy, CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 @Component({
     selector: 'app-navbar',
+    standalone: true,
+    imports: [CommonModule, RouterModule],
     templateUrl: './navbar.component.html',
     styleUrls: ['./navbar.component.scss'],
     providers: [
