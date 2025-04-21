@@ -1,12 +1,18 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-macbook-pro',
-  standalone: true,
-  imports: [],
   templateUrl: './macbook-pro.component.html',
-  styleUrl: './macbook-pro.component.scss'
+  styleUrls: ['./macbook-pro.component.scss'],
+  standalone: true,
+  imports: [CommonModule, RouterModule]
 })
-export class MacbookProComponent {
+export class MacbookProComponent implements OnInit {
+  constructor() { }
 
+  ngOnInit(): void {
+    // Initialize any necessary functionality
+  }
 }
