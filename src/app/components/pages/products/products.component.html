@@ -1,0 +1,356 @@
+<section class="">
+    <owl-carousel-o [options]="customOptions">
+        <ng-container *ngFor="let slide of slides">
+            <ng-template carouselSlide [id]="slide.id">
+                <div class="d-table">
+                    <div class="d-table-cell">
+                        <div class="container-fluid">
+                            <div class="row align-items-center">
+                                <div class="col-lg-12" style="padding: 0 !important;">
+                                    <div class="banner-content" [style.background-image]="'url(' + slide.img + ')'">
+                                        <div class="banner-text">
+                                            <h1>{{slide.title}}</h1>
+                                            <p>{{slide.description1}}</p>
+                                            <p>{{slide.description2}}</p>
+                                            <p>{{slide.description3}}</p>
+                                            <div class="banner-btn">
+                                                <!-- <a routerLink="/contact" class="box-btn">Contact Us</a> -->
+                                                <a routerLink="{{slide.pageLink}}" class="box-btn border-btn">Know More</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </ng-template>
+        </ng-container>
+    </owl-carousel-o>
+
+   <!--  <div class="home-shape">
+        <div class="shape1"><img src="assets/images/shape/1.png" alt="shape"></div>
+        <div class="shape2"><img src="assets/images/shape/2.png" alt="shape"></div>
+        <div class="shape3"><img src="assets/images/shape/3.png" alt="shape"></div>
+        <div class="shape4"><img src="assets/images/shape/4.png" alt="shape"></div>
+        <div class="shape5"><img src="assets/images/shape/5.png" alt="shape"></div>
+        <div class="shape6"><img src="assets/images/shape/6.png" alt="shape"></div>
+    </div> -->
+</section>
+
+<!-- Apple Products Section -->
+<section class="home-case ptb-100">
+    <div class="container">
+        <div class="section-title">
+            <span>Apple Products</span>
+            <h2>Discover Our Latest Apple Devices</h2>
+            <p>Explore our range of Apple products designed to enhance your digital experience with cutting-edge technology and innovative features.</p>
+        </div>
+        <div class="case">
+            <ul class="nav-tabset">
+                <li class="nav-tab" [ngClass]="{'active': currentTab === 'tab1'}">
+                    <span (click)="switchTab($event, 'tab1')">
+                        All
+                    </span>
+                </li>
+                <li class="nav-tab" [ngClass]="{'active': currentTab === 'tab2'}">
+                    <span (click)="switchTab($event, 'tab2')">
+                        iPhone
+                    </span>
+                </li>
+                <li class="nav-tab" [ngClass]="{'active': currentTab === 'tab3'}">
+                    <span (click)="switchTab($event, 'tab3')">
+                        Mac
+                    </span>
+                </li>
+                <li class="nav-tab" [ngClass]="{'active': currentTab === 'tab4'}">
+                    <span (click)="switchTab($event, 'tab4')">
+                        Accessories
+                    </span>
+                </li>
+                <li class="nav-tab" [ngClass]="{'active': currentTab === 'tab5'}">
+                    <span (click)="switchTab($event, 'tab5')">
+                        iPad
+                    </span>
+                </li>
+            </ul>
+            <div class="tabs-container">
+                <div class="pane" id="tab1" *ngIf="currentTab === 'tab1'">
+                    <div class="row case-list">
+                        <!-- iPhone 16 -->
+                        <div class="col-lg-4 col-sm-6">
+                            <div class="single-case">
+                                <div class="case-img">
+                                    <a routerLink="/products/iphone-16"><img src="assets/images/products/iphone16.jpg" alt="iPhone 16"/></a>
+                                </div>
+                                <div class="content">
+                                    <a routerLink="/products/iphone-16"><h3>iPhone 16</h3></a>
+                                    <p>Experience the future with iPhone 16. Revolutionary design and powerful performance.</p>
+                                    <a routerLink="/products/iphone-16" class="line-bnt">View Product Details</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- iPhone 16 Pro -->
+                        <div class="col-lg-4 col-sm-6">
+                            <div class="single-case">
+                                <div class="case-img">
+                                    <a routerLink="/products/iphone-16-pro"><img src="assets/images/products/iphone16-pro.jpg" alt="iPhone 16 Pro"/></a>
+                                </div>
+                                <div class="content">
+                                    <a routerLink="/products/iphone-16-pro"><h3>iPhone 16 Pro</h3></a>
+                                    <p>Pro. Beyond. The most advanced iPhone ever created.</p>
+                                    <a routerLink="/products/iphone-16-pro" class="line-bnt">View Product Details</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- iPhone 16e -->
+                        <div class="col-lg-4 col-sm-6">
+                            <div class="single-case">
+                                <div class="case-img">
+                                    <a routerLink="/products/iphone-16e"><img src="assets/images/products/iphone16e.jpg" alt="iPhone 16e"/></a>
+                                </div>
+                                <div class="content">
+                                    <a routerLink="/products/iphone-16e"><h3>iPhone 16e</h3></a>
+                                    <p>Affordable innovation. Premium features at an accessible price.</p>
+                                    <a routerLink="/products/iphone-16e" class="line-bnt">View Product Details</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- iPhone 16e Geo -->
+                        <div class="col-lg-4 col-sm-6">
+                            <div class="single-case">
+                                <div class="case-img">
+                                    <a routerLink="/products/iphone-16e-geo"><img src="assets/images/products/iphone16egeo.jpg" alt="iPhone 16e Geo"/></a>
+                                </div>
+                                <div class="content">
+                                    <a routerLink="/products/iphone-16e-geo"><h3>iPhone 16e Geo</h3></a>
+                                    <p>Designed for your region. Localized features and support.</p>
+                                    <a routerLink="/products/iphone-16e-geo" class="line-bnt">View Product Details</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- MacBook Air -->
+                        <div class="col-lg-4 col-sm-6">
+                            <div class="single-case">
+                                <div class="case-img">
+                                    <a routerLink="/products/macbook-air"><img src="assets/images/products/macbook-air.jpg" alt="MacBook Air"/></a>
+                                </div>
+                                <div class="content">
+                                    <a routerLink="/products/macbook-air"><h3>MacBook Air</h3></a>
+                                    <p>Light. Fast. Powerful. The perfect balance of performance and portability.</p>
+                                    <a routerLink="/products/macbook-air" class="line-bnt">View Product Details</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- MacBook Pro -->
+                        <div class="col-lg-4 col-sm-6">
+                            <div class="single-case">
+                                <div class="case-img">
+                                    <a routerLink="/products/macbook-pro"><img src="assets/images/products/macbook-pro.jpg" alt="MacBook Pro"/></a>
+                                </div>
+                                <div class="content">
+                                    <a routerLink="/products/macbook-pro"><h3>MacBook Pro</h3></a>
+                                    <p>Supercharged by M4 chip. Professional performance for creative work.</p>
+                                    <a routerLink="/products/macbook-pro" class="line-bnt">View Product Details</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- AirPods -->
+                        <div class="col-lg-4 col-sm-6">
+                            <div class="single-case">
+                                <div class="case-img">
+                                    <a routerLink="/products/airpods-max"><img src="assets/images/products/airpods-max.jpg" alt="AirPods Max"/></a>
+                                </div>
+                                <div class="content">
+                                    <a routerLink="/products/airpods-max"><h3>AirPods Max</h3></a>
+                                    <p>High-fidelity audio. Magical experience. Premium sound quality.</p>
+                                    <a routerLink="/products/airpods-max" class="line-bnt">View Product Details</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Apple Watch -->
+                        <div class="col-lg-4 col-sm-6">
+                            <div class="single-case">
+                                <div class="case-img">
+                                    <a routerLink="/products/apple-watch"><img src="assets/images/products/apple-watch.jpg" alt="Apple Watch"/></a>
+                                </div>
+                                <div class="content">
+                                    <a routerLink="/products/apple-watch"><h3>Apple Watch</h3></a>
+                                    <p>A healthy leap ahead. Stay connected and monitor your health.</p>
+                                    <a routerLink="/products/apple-watch" class="line-bnt">View Product Details</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- iPad Air -->
+                        <div class="col-lg-4 col-sm-6">
+                            <div class="single-case">
+                                <div class="case-img">
+                                    <a routerLink="/products/ipad-air"><img src="assets/images/products/ipad-air.jpg" alt="iPad Air"/></a>
+                                </div>
+                                <div class="content">
+                                    <a routerLink="/products/ipad-air"><h3>iPad Air</h3></a>
+                                    <p>Powerful. Colorful. Wonderful. The perfect balance of performance and portability.</p>
+                                    <a routerLink="/products/ipad-air" class="line-bnt">View Product Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pane" id="tab2" *ngIf="currentTab === 'tab2'">
+                    <div class="row case-list">
+                        <!-- iPhone 16 -->
+                        <div class="col-lg-4 col-sm-6">
+                            <div class="single-case">
+                                <div class="case-img">
+                                    <a routerLink="/products/iphone-16"><img src="assets/images/products/iphone16.jpg" alt="iPhone 16"/></a>
+                                </div>
+                                <div class="content">
+                                    <a routerLink="/products/iphone-16"><h3>iPhone 16</h3></a>
+                                    <p>Experience the future with iPhone 16. Revolutionary design and powerful performance.</p>
+                                    <a routerLink="/products/iphone-16" class="line-bnt">View Product Details</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- iPhone 16 Pro -->
+                        <div class="col-lg-4 col-sm-6">
+                            <div class="single-case">
+                                <div class="case-img">
+                                    <a routerLink="/products/iphone-16-pro"><img src="assets/images/products/iphone16-pro.jpg" alt="iPhone 16 Pro"/></a>
+                                </div>
+                                <div class="content">
+                                    <a routerLink="/products/iphone-16-pro"><h3>iPhone 16 Pro</h3></a>
+                                    <p>Pro. Beyond. The most advanced iPhone ever created.</p>
+                                    <a routerLink="/products/iphone-16-pro" class="line-bnt">View Product Details</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- iPhone 16e -->
+                        <div class="col-lg-4 col-sm-6">
+                            <div class="single-case">
+                                <div class="case-img">
+                                    <a routerLink="/products/iphone-16e"><img src="assets/images/products/iphone16e.jpg" alt="iPhone 16e"/></a>
+                                </div>
+                                <div class="content">
+                                    <a routerLink="/products/iphone-16e"><h3>iPhone 16e</h3></a>
+                                    <p>Affordable innovation. Premium features at an accessible price.</p>
+                                    <a routerLink="/products/iphone-16e" class="line-bnt">View Product Details</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- iPhone 16e Geo -->
+                        <div class="col-lg-4 col-sm-6">
+                            <div class="single-case">
+                                <div class="case-img">
+                                    <a routerLink="/products/iphone-16e-geo"><img src="assets/images/products/iphone16egeo.jpg" alt="iPhone 16e Geo"/></a>
+                                </div>
+                                <div class="content">
+                                    <a routerLink="/products/iphone-16e-geo"><h3>iPhone 16e Geo</h3></a>
+                                    <p>Designed for your region. Localized features and support.</p>
+                                    <a routerLink="/products/iphone-16e-geo" class="line-bnt">View Product Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pane" id="tab3" *ngIf="currentTab === 'tab3'">
+                    <div class="row case-list">
+                        <!-- MacBook Air -->
+                        <div class="col-lg-4 col-sm-6">
+                            <div class="single-case">
+                                <div class="case-img">
+                                    <a routerLink="/products/macbook-air"><img src="assets/images/products/macbook-air.jpg" alt="MacBook Air"/></a>
+                                </div>
+                                <div class="content">
+                                    <a routerLink="/products/macbook-air"><h3>MacBook Air</h3></a>
+                                    <p>Light. Fast. Powerful. The perfect balance of performance and portability.</p>
+                                    <a routerLink="/products/macbook-air" class="line-bnt">View Product Details</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- MacBook Pro -->
+                        <div class="col-lg-4 col-sm-6">
+                            <div class="single-case">
+                                <div class="case-img">
+                                    <a routerLink="/products/macbook-pro"><img src="assets/images/products/macbook-pro.jpg" alt="MacBook Pro"/></a>
+                                </div>
+                                <div class="content">
+                                    <a routerLink="/products/macbook-pro"><h3>MacBook Pro</h3></a>
+                                    <p>Supercharged by M4 chip. Professional performance for creative work.</p>
+                                    <a routerLink="/products/macbook-pro" class="line-bnt">View Product Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pane" id="tab4" *ngIf="currentTab === 'tab4'">
+                    <div class="row case-list">
+                        <!-- Apple Watch -->
+                        <div class="col-lg-4 col-sm-6">
+                            <div class="single-case">
+                                <div class="case-img">
+                                    <a routerLink="/products/apple-watch"><img src="assets/images/products/apple-watch.jpg" alt="Apple Watch"/></a>
+                                </div>
+                                <div class="content">
+                                    <a routerLink="/products/apple-watch"><h3>Apple Watch</h3></a>
+                                    <p>A healthy leap ahead. Stay connected and monitor your health.</p>
+                                    <a routerLink="/products/apple-watch" class="line-bnt">View Product Details</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- AirPods Max -->
+                        <div class="col-lg-4 col-sm-6">
+                            <div class="single-case">
+                                <div class="case-img">
+                                    <a routerLink="/products/airpods-max"><img src="assets/images/products/airpods-max.jpg" alt="AirPods Max"/></a>
+                                </div>
+                                <div class="content">
+                                    <a routerLink="/products/airpods-max"><h3>AirPods Max</h3></a>
+                                    <p>High-fidelity audio. Magical experience. Premium sound quality.</p>
+                                    <a routerLink="/products/airpods-max" class="line-bnt">View Product Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pane" id="tab5" *ngIf="currentTab === 'tab5'">
+                    <div class="row case-list">
+                        <!-- iPad Air -->
+                        <div class="col-lg-4 col-sm-6">
+                            <div class="single-case">
+                                <div class="case-img">
+                                    <a routerLink="/products/ipad-air"><img src="assets/images/products/ipad-air.jpg" alt="iPad Air"/></a>
+                                </div>
+                                <div class="content">
+                                    <a routerLink="/products/ipad-air"><h3>iPad Air</h3></a>
+                                    <p>Powerful. Colorful. Wonderful. The perfect balance of performance and portability.</p>
+                                    <a routerLink="/products/ipad-air" class="line-bnt">View Product Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="case-btn text-center">
+            <p>Explore More Apple Products. <a routerLink="/products">View More</a></p>
+        </div>
+    </div>
+</section>
+

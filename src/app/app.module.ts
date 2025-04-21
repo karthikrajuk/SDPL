@@ -32,7 +32,7 @@ import { ContactComponent } from './components/pages/contact/contact.component';
 import { TrainingComponent } from './components/pages/training/training.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
-
+import { OurServicesComponent } from './components/pages/our-services/our-services.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -58,7 +58,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     TermsConditionsComponent,
     PrivacyPolicyComponent,
     ContactComponent,
-    TrainingComponent
+    TrainingComponent,
+    OurServicesComponent
   ],
   imports: [
     BrowserModule,
