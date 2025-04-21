@@ -59,7 +59,7 @@ export class HomeOneComponent implements OnInit {
             description3: ' Deploy Macs and iPads at scale with zero-touch setup and enterprise-grade support.',
             img: 'assets/images/homes.png',
             alt: 'Apple Devices for Enterprise',
-            pageLink: '/apple-devices-for-enterprise'
+            pageLink: '/apple-enterprise'
         },
         {
             id: 2,
@@ -69,7 +69,7 @@ export class HomeOneComponent implements OnInit {
             description3: 'Secure, manage, and monitor Apple devices with advanced MDM integration.',
             img: 'assets/images/mdm.png',
             alt: 'MDM Solutions',
-            pageLink: '/mdm-solutions'
+            pageLink: '/mdm'
         },
         {
             id: 3,
@@ -79,7 +79,7 @@ export class HomeOneComponent implements OnInit {
             description3: 'Smart AV integrations for seamless presentations and hybrid collaboration.',            
             img: 'assets/images/AVsol1.jpeg',
             alt: 'Audio Video Setup',
-            pageLink: '/audio-video-setup'
+            pageLink: '/avsolution'
         },
         {
             id: 4,
@@ -89,7 +89,7 @@ export class HomeOneComponent implements OnInit {
             description3: 'Enterprise-grade networking built for speed, stability, and scale.',            
             img: 'assets/images/networking_banner.jpeg',
             alt: 'Networking Solutions',
-            pageLink: 'https://superiorsystems.in/networking'
+            pageLink: '/networking'
         },
         {
             id: 5,
@@ -109,7 +109,7 @@ export class HomeOneComponent implements OnInit {
             description3: 'Scalable leasing models to stay future-ready and financially agile.',
             img: 'assets/images/leasing.png',
             alt: 'Leasing Services',
-            pageLink: '/leasing-services'
+            pageLink: '/leasing'
         },
         {
             id: 7,
@@ -119,7 +119,7 @@ export class HomeOneComponent implements OnInit {
             description3: 'Smart financing options for seamless IT expansion and upgrades.',
             img: 'assets/images/financing.png',
             alt: 'Financing Solutions',
-            pageLink: '/financing-solutions'
+            pageLink: '/apple-financing'
         }
     ];
 

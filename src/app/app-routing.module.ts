@@ -60,6 +60,12 @@ import { AppleTrainingComponent } from './components/pages/apple-training/apple-
 import { AppleEcosystemComponent } from './components/pages/apple-ecosystem/apple-ecosystem.component';
 import { AppleProgramComponent } from './components/pages/apple-program/apple-program.component';
 import { MacbookAirComponent } from './components/pages/macbook-air/macbook-air.component';
+import { NetworkingComponent } from './components/pages/networking/networking.component';
+import { AppleEnterpriseComponent } from './components/pages/apple-enterprise/apple-enterprise.component';
+import { MdmComponent } from './components/pages/mdm/mdm.component';
+import { AVSolutionsComponent } from './components/pages/avsolutions/avsolutions.component';
+import { MobilityComponent } from './components/pages/mobility/mobility.component';
+import { LeasingComponent } from './components/pages/leasing/leasing.component';
 
 const routes: Routes = [
     {path: '', component: HomeOneComponent},
@@ -122,6 +128,12 @@ const routes: Routes = [
     {path: 'apple-ecosystem', component: AppleEcosystemComponent},
     {path: 'apple-program', component: AppleProgramComponent},
     {path: 'macbook-air', component: MacbookAirComponent},
+    {path: 'networking', component: NetworkingComponent},
+    {path: 'apple-enterprise', component: AppleEnterpriseComponent},
+    {path: 'mdm', component: MdmComponent},
+    {path: 'avsolution', component: AVSolutionsComponent},
+    {path: 'mobility', component: MobilityComponent},
+    {path: 'leasing', component: LeasingComponent},
     // Here add new pages component
 
     {path: '**', component: ErrorComponent} // This line will remain down from the whole pages component list
