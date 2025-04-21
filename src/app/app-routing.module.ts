@@ -59,6 +59,7 @@ import { AppleMaintenanceComponent } from './components/pages/apple-maintenance/
 import { AppleTrainingComponent } from './components/pages/apple-training/apple-training.component';
 import { AppleEcosystemComponent } from './components/pages/apple-ecosystem/apple-ecosystem.component';
 import { AppleProgramComponent } from './components/pages/apple-program/apple-program.component';
+import { MacbookAirComponent } from './components/pages/macbook-air/macbook-air.component';
 
 const routes: Routes = [
     {path: '', component: HomeOneComponent},
