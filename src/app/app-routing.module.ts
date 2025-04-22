@@ -76,6 +76,7 @@ import { ImpetusComponent } from './components/pages/impetus/impetus.component';
 import { EmpPurcProgComponent } from './components/pages/emp-purc-prog/emp-purc-prog.component';
 import { DriveInnovationComponent } from './components/pages/drive-innovation/drive-innovation.component';
 import { ITStrategyComponent } from './components/pages/it-strategy/it-strategy.component';
+import { IpadProComponent } from './components/pages/ipad-pro/ipad-pro.component';
 
 const routes: Routes = [
     {path: '', component: HomeOneComponent},
@@ -154,7 +155,7 @@ const routes: Routes = [
     {path: 'emp-purchase-program', component: EmpPurcProgComponent},
     {path: 'drive-innovation', component: DriveInnovationComponent},
     {path: 'IT-strategy', component: ITStrategyComponent},
-
+    {path: 'ipad-pro', component: IpadProComponent},
     
     
     // Here add new pages component
