@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
   templateUrl: './apple-enterprise.component.html',
   styleUrl: './apple-enterprise.component.scss'
 })
-export class AppleEnterpriseComponent implements OnInit  {
+export class AppleEnterpriseComponent implements OnInit, AfterViewInit {
 
   constructor(private router: Router) { }
 
@@ -17,6 +17,31 @@ export class AppleEnterpriseComponent implements OnInit  {
     link.rel = 'stylesheet';
     link.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css';
     document.head.appendChild(link);
+  }
+
+  ngAfterViewInit(): void {
+    this.initializeAnimations();
+  }
+
+  private initializeAnimations(): void {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const element = entry.target as HTMLElement;
+          const delay = element.getAttribute('data-delay') || '0';
+          setTimeout(() => {
+            element.classList.add('animate');
+          }, parseInt(delay));
+        }
+      });
+    }, {
+      threshold: 0.2,
+      rootMargin: '0px 0px -50px 0px'
+    });
+
+    document.querySelectorAll('.slide-in').forEach(element => {
+      observer.observe(element);
+    });
   }
 
   navigateToHome(): void {
