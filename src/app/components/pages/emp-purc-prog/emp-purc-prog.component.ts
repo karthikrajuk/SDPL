@@ -31,10 +31,12 @@ export class EmpPurcProgComponent implements OnInit, AfterViewInit {
         }
       });
     }, {
-      threshold: 0.2
+      threshold: 0.2,
+      rootMargin: '0px 0px -100px 0px'
     });
 
-    document.querySelectorAll('.animate-step').forEach(element => {
+    // Observe both work steps and benefit cards
+    document.querySelectorAll('.animate-step, .animate-card').forEach(element => {
       observer.observe(element);
     });
   }

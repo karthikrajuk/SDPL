@@ -35,7 +35,8 @@
 }
 
 .benefits-section {
-    background: linear-gradient(45deg, #1a237e 0%, #0d47a1 35%, #01579b 70%, #006064 100%);
+    background: linear-gradient(45deg, #1a237e61 0%, #0d47a199 35%, #01579b91 70%, #00606447 100%);
+    // background: linear-gradient(45deg, #1a237e 0%, #0d47a1 35%, #01579b 70%, #006064 100%);
     position: relative;
     
     .section-title {
@@ -438,7 +439,7 @@
         transition: all 0.3s ease;
         position: relative;
         z-index: 1;
-        opacity: 0.4;
+        opacity: 0.9;
         margin-bottom: 30px;
 
         .icon {
@@ -447,7 +448,7 @@
             line-height: 70px;
             text-align: center;
             border-radius: 50%;
-            background: #28a745;
+            background: transparent;
             color: #fff;
             font-size: 30px;
             margin: 0 auto 20px;
@@ -474,7 +475,7 @@
             box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
 
             .icon {
-                background: #218838;
+                background: transparent;
             }
         }
     }
