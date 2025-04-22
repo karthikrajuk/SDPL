@@ -74,6 +74,8 @@ import { Iphone16eComponent } from './components/pages/iphone16e/iphone16e.compo
 import { Iphone16proComponent } from './components/pages/iphone16pro/iphone16pro.component';
 import { ImpetusComponent } from './components/pages/impetus/impetus.component';
 import { EmpPurcProgComponent } from './components/pages/emp-purc-prog/emp-purc-prog.component';
+import { DriveInnovationComponent } from './components/pages/drive-innovation/drive-innovation.component';
+import { ITStrategyComponent } from './components/pages/it-strategy/it-strategy.component';
 
 const routes: Routes = [
     {path: '', component: HomeOneComponent},
@@ -150,7 +152,9 @@ const routes: Routes = [
     {path: 'iphone-16pro', component: Iphone16proComponent},
     {path: 'impetus', component: ImpetusComponent},
     {path: 'emp-purchase-program', component: EmpPurcProgComponent},
-    
+    {path: 'drive-innovation', component: DriveInnovationComponent},
+    {path: 'IT-strategy', component: ITStrategyComponent},
+
     
     
     // Here add new pages component
