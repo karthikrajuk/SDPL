@@ -72,6 +72,8 @@ import { IpadAirComponent } from './components/pages/ipad-air/ipad-air.component
 import { AirpodsMaxComponent } from './components/pages/airpods-max/airpods-max.component';
 import { Iphone16eComponent } from './components/pages/iphone16e/iphone16e.component';
 import { Iphone16proComponent } from './components/pages/iphone16pro/iphone16pro.component';
+import { ImpetusComponent } from './components/pages/impetus/impetus.component';
+import { EmpPurcProgComponent } from './components/pages/emp-purc-prog/emp-purc-prog.component';
 
 const routes: Routes = [
     {path: '', component: HomeOneComponent},
@@ -146,7 +148,8 @@ const routes: Routes = [
     {path: 'airpods-max', component: AirpodsMaxComponent},  
     {path: 'iphone-16e', component: Iphone16eComponent},
     {path: 'iphone-16pro', component: Iphone16proComponent},
-    
+    {path: 'impetus', component: ImpetusComponent},
+    {path: 'emp-purchase-program', component: EmpPurcProgComponent},
     
     
     

@@ -93,14 +93,6 @@
                     <ul class="navbar-nav text-left">
                         <li class="nav-item">
                             <a routerLink="/" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}" (click)="closeMenu()">Home</a>
-
-                            <!-- <ul class="dropdown-menu">
-                                <li class="nav-item"><a routerLink="/" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Home One</a></li>
-
-                                <li class="nav-item"><a routerLink="/home-two" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Home Two</a></li>
-
-                                <li class="nav-item"><a routerLink="/home-three" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Home Three</a></li>
-                            </ul> -->
                         </li>
 
                         <li class="nav-item">
@@ -125,7 +117,7 @@
 
                                 <li class="nav-item"><a routerLink="/products" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}" (click)="closeMenu()">Products</a></li>
                                 
-                                <li class="nav-item"><a routerLink="/apple-program" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}" (click)="closeMenu()">Apple Programs</a></li>
+                                <!-- <li class="nav-item"><a routerLink="/apple-program" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}" (click)="closeMenu()">Apple Programs</a></li> -->
 
                                 <li class="nav-item"><a routerLink="/" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}" (click)="closeMenu()">Drive innovations with Apple</a></li>
                                 <!-- <li class="nav-item"><a routerLink="/" fragment="about-us" class="nav-link" (click)="closeMenu()">About Us</a></li> -->
@@ -135,21 +127,18 @@
                                 <li class="nav-item"><a routerLink="/" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}" (click)="closeMenu()">Resources for your IT strategy</a></li>
 
                                 <li class="nav-item"><a routerLink="/case-studies" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}" (click)="closeMenu()">Success Stories</a></li>
-
-                                <!-- <li class="nav-item">
-                                    <a href="javascript:void(0)" class="nav-link dropdown-toggle">Success Stories</a>
-        
-                                    <ul class="dropdown-menu">
-                                        <li class="nav-item"><a routerLink="/case-studies" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}" (click)="closeMenu()">Case Studies</a></li>
-                                    </ul>
-                                </li> -->
-                                <!-- <li class="nav-item">
-                                    <ul  class="dropdown-menu"><a routerLink="/" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}" (click)="closeMenu()">Success Stories</a>
-
-                                        <li class="nav-item"><a routerLink="/case-studies" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}" (click)="closeMenu()">Case Studies</a></li>
-                                    </ul>
-                                </li> -->
                             </ul>                        
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="javascript:void(0)" class="nav-link dropdown-toggle">Apple Programs</a>
+                            <ul class="dropdown-menu">
+                                <li class="nav-item"><a routerLink="/apple-program" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}" (click)="closeMenu()">Mac for Developers</a></li>
+
+                                <li class="nav-item"><a routerLink="/impetus" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}" (click)="closeMenu()">Impetus</a></li>
+
+                                <li class="nav-item"><a routerLink="/about" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}" (click)="closeMenu()">Smart Employee Purchase Program</a></li>
+                            </ul>
                         </li>
 
                         <!-- <li class="nav-item">
