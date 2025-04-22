@@ -7,7 +7,8 @@ import { HttpClient } from '@angular/common/http';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import emailjs from '@emailjs/browser';
 import { ReactiveFormsModule } from '@angular/forms';
-
+import { ActivatedRoute, Router, NavigationEnd } from '@angular/router';
+import { filter } from 'rxjs/operators';
 
 @Component({
     selector: 'app-home-one',
@@ -40,16 +41,20 @@ export class HomeOneComponent implements OnInit {
         'Airpods', 
         'Other Accessories', 
     ]; 
-    constructor(private fb: FormBuilder, private http: HttpClient) { 
+    constructor(
+        private fb: FormBuilder, 
+        private http: HttpClient,
+        private route: ActivatedRoute,
+        private router: Router
+    ) { 
         this.contactForm = this.fb.group({
             name: ['', [Validators.required]],
             email: ['', [Validators.required, Validators.email]],
             message: ['', [Validators.required]],
             phone: ['', [Validators.required]],
             device: ['']
-          });
-          emailjs.init("PTmfxUAnOlAZlyhRB");
-
+        });
+        emailjs.init("PTmfxUAnOlAZlyhRB");
     }
 
     customOptions: OwlOptions = {
@@ -153,7 +158,35 @@ export class HomeOneComponent implements OnInit {
         }
     ];
 
-    ngOnInit(): void {}
+    scrollToSection(fragment: string): void {
+        const element = document.getElementById(fragment);
+        if (element) {
+            const headerOffset = 100; // Adjust this value based on your header height
+            const elementPosition = element.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth'
+            });
+        }
+    }
+
+    ngOnInit(): void {
+        // Handle both initial navigation and subsequent fragment changes
+        this.router.events.pipe(
+            filter(event => event instanceof NavigationEnd)
+        ).subscribe(() => {
+            this.route.fragment.subscribe(fragment => {
+                if (fragment) {
+                    // Add a small delay to ensure the DOM is ready
+                    setTimeout(() => {
+                        this.scrollToSection(fragment);
+                    }, 100);
+                }
+            });
+        });
+    }
 
     teamSlides: OwlOptions = {
 		loop: true,
