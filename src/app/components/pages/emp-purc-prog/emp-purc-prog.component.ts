@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-emp-purc-prog',
@@ -7,6 +8,14 @@ import { Component } from '@angular/core';
   templateUrl: './emp-purc-prog.component.html',
   styleUrl: './emp-purc-prog.component.scss'
 })
-export class EmpPurcProgComponent {
+export class EmpPurcProgComponent implements OnInit {
 
+  constructor(private router: Router) { }
+
+  ngOnInit(): void {
+  }
+
+  navigateToContact(): void {
+    this.router.navigate(['/contact']);
+  }
 }
