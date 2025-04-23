@@ -26,7 +26,7 @@ export class AppleEnterpriseComponent implements OnInit, AfterViewInit {
       icon: 'fas fa-tachometer-alt'
     },
     { 
-      title: 'All-Day Power', 
+      title: 'Up to 24hrs Battery Life', 
       description: 'Exceptional battery backup for mobile productivity.',
       icon: 'fas fa-battery-full'
     },
