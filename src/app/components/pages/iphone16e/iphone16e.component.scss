@@ -33,11 +33,10 @@
             gap: 20px;
 
             .introducing {
-                font-size: 24px;
-                font-weight: 500;
+                font-size: 28px;
+                font-weight: 600;
                 color: #000;
-                text-transform: uppercase;
-                letter-spacing: 0.1em;
+                // text-transform: uppercase;
             }
 
             .hero-logo {
@@ -68,15 +67,13 @@
             }
 
             .ai-text {
-                font-size: 48px;
+                font-size: 36px;
                 font-weight: 600;
                 margin: 0;
                 background:linear-gradient(128deg, #0090f7 6%, #ba62fc 36%, #f2416b 79%, #f55600 95%);
-                background-size: 200% auto;
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
                 background-clip: text;
-                
             }
         }
     }
@@ -94,65 +91,53 @@
     .feature-card {
         background: #fff;
         border-radius: 25px;
-        padding: 40px;
+        padding: 40px 30px;
         box-shadow: 0 4px 30px rgba(0, 0, 0, 0.03);
-        margin-bottom: 25px;
 
         &.display-card {
-            .content-wrapper {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
-                gap: 30px;
+            .text-content {
+                margin-bottom: 20px;
 
-                .text-content {
-
-                    .title-area {
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        gap: 10px;
-                        margin-bottom: 12px;
-
-                        h2 {
-                            font-size: 38px;
-                            font-weight: 600;
-                            color: #1d1d1f;
-                            line-height: 1.1;
-                            margin: 0;
-                        }
-                    }
-
-                    .subtitle {
-                        font-size: 18px;
-                        color: #86868b;
-                        line-height: 1.4;
-                        margin: 0;
-                    }
+                h2 {
+                    font-size: 32px;
+                    font-weight: 600;
+                    color: #1d1d1f;
+                    line-height: 1.1;
+                    margin-bottom: 8px;
                 }
 
-                .image-content {
+                .subtitle {
+                    font-size: 15px;
+                    color: #86868b;
+                    line-height: 1.4;
+                    margin: 0;
+                }
+            }
+
+            .image-content {
+                max-width: 600px;
+                margin: 0 auto;
+                
+                img {
                     width: 100%;
-                    max-width: 550px;
-                    
-                    img {
-                        width: 100%;
-                        height: auto;
-                        object-fit: contain;
-                        border-radius: 15px;
-                    }
+                    height: auto;
+                    object-fit: contain;
                 }
             }
         }
 
         &.durability-card {
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+
             .content-wrapper {
                 position: relative;
-                min-height: 400px;
-                display: flex;
-                align-items: flex-end;
+                min-height: 460px;
+                height: 100%;
                 padding: 0;
+                overflow: hidden;
+                border-radius: 25px;
 
                 .background-image {
                     position: absolute;
@@ -168,8 +153,8 @@
                         bottom: 0;
                         left: 0;
                         width: 100%;
-                        height: 50%;
-                        background: linear-gradient(to top, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+                        height: 100%;
+                        // background: linear-gradient(to top, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
                         z-index: 2;
                     }
 
@@ -181,14 +166,324 @@
                 }
 
                 .text-content {
-                    position: relative;
+                    position: absolute;
+                    top: 80px;
+                    left: 0;
                     z-index: 2;
-                    text-align: left;
-                    padding: 40px;
+                    text-align: center;
                     width: 100%;
+                    padding: 0 30px;
 
                     h2 {
+                        font-size: 36px;
+                        font-weight: 600;
+                        color: #fff;
+                        line-height: 1.1;
+                        margin: 0;
+                    }
+                }
+            }
+        }
+
+        &.battery-card {
+            height: 100%;
+            padding: 60px 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+
+            .content-wrapper {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: flex-start;
+                gap: 25px;
+                height: 100%;
+
+                .battery-icon {
+                    width: 75px;
+                    height: 75px;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: contain;
+                    }
+                }
+
+                .text-content {
+                    h2 {
                         font-size: 48px;
+                        font-weight: 600;
+                        color: #1d1d1f;
+                        margin-bottom: 40px;
+                    }
+
+                    .battery-stats {
+                        display: flex;
+                        align-items: flex-start;
+                        justify-content: center;
+                        gap: 40px;
+                        position: relative;
+
+                        .stat {
+                            text-align: center;
+                            max-width: 280px;
+
+                            .hours {
+                                font-size: 20px;
+                                font-weight: 600;
+                                color: #1d1d1f;
+                                margin-bottom: 8px;
+                            }
+
+                            .description {
+                                font-size: 14px;
+                                color: #86868b;
+                                line-height: 1.3;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &.chip-card {
+            background: #000;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+
+            .content-wrapper {
+                position: relative;
+                min-height: 460px;
+                height: 100%;
+                padding: 50px 40px;
+                color: #fff;
+                display: flex;
+                flex-direction: column;
+
+                .text-content {
+                    text-align: center;
+                    margin-bottom: 30px;
+
+                    h2 {
+                        font-size: 36px;
+                        font-weight: 600;
+                        color: #fff;
+                        line-height: 1.1;
+                        margin: 0 0 10px;
+                    }
+
+                    h3 {
+                        font-size: 36px;
+                        font-weight: 600;
+                        color: #fff;
+                        line-height: 1.1;
+                        margin: 0;
+                    }
+                }
+
+                .chip-image {
+                    text-align: center;
+                    margin-bottom: 40px;
+                    
+                    img {
+                        width: 100%;
+                        max-width: 280px;
+                        height: auto;
+                    }
+                }
+
+                .performance-content {
+                    padding: 0 20px;
+
+                    .label {
+                        color: #86868b;
+                        font-size: 17px;
+                        margin-bottom: 15px;
+                    }
+
+                    .cpu-stats {
+                        .stat-row {
+                            margin-bottom: 25px;
+
+                            .stat-bar {
+                                height: 8px;
+                                background: transparent;
+                                border-radius: 4px;
+                                margin-bottom: 12px;
+                                position: relative;
+                                overflow: hidden;
+
+                                &.base {
+                                    background: #86868b;
+                                    opacity: 0.3;
+                                }
+
+                                .bar-fill {
+                                    position: absolute;
+                                    top: 0;
+                                    left: 0;
+                                    height: 100%;
+                                    width: 100%;
+
+                                    &.gradient-fill {
+                                        background: linear-gradient(128deg, #0090f7 6%, #ba62fc 36%, #f2416b 79%, #f55600 95%);
+                                    }
+                                }
+                            }
+
+                            .stat-text {
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: center;
+                                font-size: 12px;
+
+                                .device {
+                                    color: #fff;
+                                }
+
+                                .performance {
+                                    color: #f2416b;
+                                    font-weight: 600;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &.intelligence-card {
+            background: #fff;
+            padding: 50px 40px;
+            height: 100%;
+
+            .content-wrapper {
+                .text-content {
+                    text-align: center;
+                    margin-bottom: 40px;
+
+                    h2 {
+                        font-size: 36px;
+                        font-weight: 600;
+                        color: #1d1d1f;
+                        line-height: 1.1;
+                        margin: 0 0 10px;
+                    }
+
+                    h3 {
+                        font-size: 34px;
+                        font-weight: 600;
+                        line-height: 1.1;
+                        margin: 0;
+                        background: linear-gradient(128deg, #0090f7 6%, #ba62fc 36%, #f2416b 79%, #f55600 95%);
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                        background-clip: text;
+                    }
+                }
+
+                .image-content {
+                    text-align: center;
+                    margin-top: 20px;
+                    
+                    img {
+                        width: 100%;
+                        max-width: 350px;
+                        height: auto;
+                        margin: 0 auto;
+                    }
+                }
+            }
+        }
+
+        &.camera-card {
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+            border-radius: 25px;
+
+            .content-wrapper {
+                position: relative;
+                min-height: 500px;
+                height: 100%;
+                padding: 0;
+                overflow: hidden;
+                border-radius: 25px;
+                background: #0071e3;
+
+                .background-image {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    z-index: 1;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+
+                .text-content {
+                    position: absolute;
+                    bottom: 40px;
+                    left: 40px;
+                    z-index: 2;
+                    text-align: left;
+
+                    h2 {
+                        font-size: 36px;
+                        font-weight: 600;
+                        color: #fff;
+                        line-height: 1.1;
+                        margin: 0 0 10px;
+                    }
+
+                    h3 {
+                        font-size: 36px;
+                        font-weight: 600;
+                        color: #fff;
+                        line-height: 1.1;
+                        margin: 0;
+                    }
+                }
+            }
+        }
+
+        &.network-card {
+            background: #fff;
+            height: 100%;
+            padding: 30px;
+            min-height: 320px;
+
+            .content-wrapper {
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+                justify-content: center;
+
+                .image-content {
+                    text-align: center;
+                    margin-bottom: 20px;
+                    
+                    img {
+                        width: 100%;
+                        max-width: 160px;
+                        height: auto;
+                    }
+                }
+
+                .text-content {
+                    text-align: center;
+
+                    h2 {
+                        font-size: 32px;
                         font-weight: 600;
                         color: #1d1d1f;
                         line-height: 1.1;
@@ -198,86 +493,52 @@
             }
         }
 
-        &.battery-card {
+        &.emergency-card {
+            background: #fff;
+            height: 100%;
+            padding: 30px 40px;
+            min-height: 320px;
+
             .content-wrapper {
-                min-height: 400px;
-                padding: 40px;
                 display: flex;
-                flex-direction: column;
                 align-items: center;
-                justify-content: center;
+                justify-content: space-between;
                 gap: 20px;
-
-                .battery-icon {
-                    width: 60px;
-                    height: 60px;
-                    margin-bottom: 0;
-
-                    img {
-                        width: 100%;
-                        height: 100%;
-                        object-fit: contain;
-                        filter: invert(57%) sepia(96%) saturate(402%) hue-rotate(89deg) brightness(97%) contrast(93%);
-                    }
-                }
+                height: 100%;
 
                 .text-content {
-                    text-align: center;
+                    flex: 1;
+                    max-width: 45%;
 
                     h2 {
-                        font-size: 48px;
+                        font-size: 32px;
                         font-weight: 600;
                         color: #1d1d1f;
                         line-height: 1.1;
-                        margin-bottom: 40px;
+                        margin: 0 0 15px;
                     }
 
-                    .battery-stats {
-                        display: grid;
-                        grid-template-columns: 1fr 1fr;
-                        gap: 30px;
+                    p {
+                        font-size: 15px;
+                        color: #86868b;
+                        line-height: 1.4;
+                        margin: 0;
+                    }
+                }
 
-                        .stat {
-                            text-align: center;
-
-                            h3 {
-                                font-size: 17px;
-                                color: #86868b;
-                                margin-bottom: 4px;
-                                font-weight: 400;
-                            }
-
-                            .hours {
-                                font-size: 28px;
-                                font-weight: 600;
-                                color: #1d1d1f;
-                                margin-bottom: 4px;
-                            }
-
-                            .description {
-                                font-size: 17px;
-                                color: #86868b;
-                                line-height: 1.3;
-                                font-weight: 400;
-                            }
-                        }
+                .image-content {
+                    flex: 1;
+                    display: flex;
+                    justify-content: flex-end;
+                    align-items: center;
+                    
+                    img {
+                        width: 100%;
+                        max-width: 260px;
+                        height: auto;
                     }
                 }
             }
-        }
-    }
-
-    .cards-row {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 24px;
-        margin-top: 24px;
-
-        .feature-card {
-            margin-bottom: 0;
-            background: #fff;
-            border-radius: 25px;
-            overflow: hidden;
         }
     }
 }
@@ -313,49 +574,14 @@
     }
 
     .features-section {
-        .cards-row {
-            grid-template-columns: 1fr;
-            gap: 20px;
-
-            .feature-card {
-                &.durability-card,
-                &.battery-card {
-                    .content-wrapper {
-                        min-height: 350px;
-                        padding: 30px;
-
-                        .text-content h2 {
-                            font-size: 36px;
-                        }
+        .feature-card {
+            &.display-card {
+                .text-content {
+                    h2 {
+                        font-size: 36px;
                     }
-                }
-
-                &.battery-card {
-                    .content-wrapper {
-                        .battery-icon {
-                            width: 50px;
-                            height: 50px;
-                        }
-
-                        .text-content {
-                            .battery-stats {
-                                gap: 20px;
-
-                                .stat {
-                                    h3 {
-                                        font-size: 15px;
-                                    }
-
-                                    .hours {
-                                        font-size: 24px;
-                                    }
-
-                                    .description {
-                                        font-size: 15px;
-                                    }
-                                }
-                            }
-                        }
+                    .subtitle {
+                        font-size: 18px;
                     }
                 }
             }
@@ -395,25 +621,33 @@
     .features-section {
         .feature-card {
             padding: 40px 20px;
-
+            
             &.display-card {
-                .content-wrapper {
-                    gap: 30px;
-
-                    .text-content {
-                        .title-area {
-                            h2 {
-                                font-size: 28px;
-                            }
-                        }
-
-                        .subtitle {
-                            font-size: 18px;
-                        }
+                .text-content {
+                    h2 {
+                        font-size: 32px;
+                    }
+                    .subtitle {
+                        font-size: 16px;
                     }
                 }
             }
         }
+    }
+}
+
+// Custom column widths
+.col-lg-35 {
+    @media (min-width: 992px) {
+        flex: 0 0 35%;
+        max-width: 35%;
+    }
+}
+
+.col-lg-65 {
+    @media (min-width: 992px) {
+        flex: 0 0 65%;
+        max-width: 65%;
     }
 }
 
