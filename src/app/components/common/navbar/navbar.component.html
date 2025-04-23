@@ -96,7 +96,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a href="javascript:void(0)" class="nav-link dropdown-toggle">About Us</a>
+                            <a href="javascript:void(0)" class="nav-link dropdown-toggle" (click)="toggleDropdown($event, $any($event.target).closest('.nav-item'))">About Us</a>
 
                             <ul class="dropdown-menu">
                                 <li class="nav-item"><a routerLink="/ourapproach" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}" (click)="closeMenu()">Our Approach</a></li>
@@ -110,7 +110,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a routerLink="/case-studies" class="nav-link dropdown-toggle" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}" (click)="closeMenu()">Apple</a>
+                            <a routerLink="/case-studies" class="nav-link dropdown-toggle" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}" (click)="toggleDropdown($event, $any($event.target).closest('.nav-item'))">Apple</a>
 
                             <ul class="dropdown-menu">
                                 <li class="nav-item"><a routerLink="/apple-enterprise" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}" (click)="closeMenu()">Why Apple for your enterprise?</a></li>
@@ -131,7 +131,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a href="javascript:void(0)" class="nav-link dropdown-toggle">Apple Programs</a>
+                            <a href="javascript:void(0)" class="nav-link dropdown-toggle" (click)="toggleDropdown($event, $any($event.target).closest('.nav-item'))">Apple Programs</a>
                             <ul class="dropdown-menu">
                                 <li class="nav-item"><a routerLink="/apple-program" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}" (click)="closeMenu()">Mac for Developers</a></li>
 
@@ -161,7 +161,7 @@
                         </li> -->
 
                         <li class="nav-item">
-                            <a href="javascript:void(0)" class="nav-link dropdown-toggle">Enterprise Solutions</a>
+                            <a href="javascript:void(0)" class="nav-link dropdown-toggle" (click)="toggleDropdown($event, $any($event.target).closest('.nav-item'))">Enterprise Solutions</a>
 
                             <ul class="dropdown-menu">
                                 <li class="nav-item"><a routerLink="/apple-deployment" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}" (click)="closeMenu()">Seamless Apple Deployment & Integrations</a></li>
@@ -193,8 +193,6 @@
                                 </li> -->
                             </ul>
                         </li>
-
-                       
 
                         <li class="nav-item"><a routerLink="/apple-business" class="nav-link" (click)="closeMenu()">Apple Business Manager</a></li>
                     </ul>
