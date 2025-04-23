@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
@@ -9,6 +9,11 @@ import { RouterModule } from '@angular/router';
   templateUrl: './mac-mini.component.html',
   styleUrl: './mac-mini.component.scss'
 })
-export class MacMiniComponent {
+export class MacMiniComponent implements OnInit {
+
+  constructor() { }
+
+  ngOnInit(): void {
+  }
 
 }

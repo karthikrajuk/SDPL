@@ -97,7 +97,7 @@ export class HomeOneComponent implements OnInit {
             description1: 'Empower your workforce with Apple devices, tailored for enterprise needs.',
             description2: 'Get your team working smarter with Apple devices that just work.',
             description3: ' Deploy Macs and iPads at scale with zero-touch setup and enterprise-grade support.',
-            img: 'assets/images/homes.png',
+            img: 'assets/images/enterprise.png',
             alt: 'Apple Devices for Enterprise',
             pageLink: '/apple-enterprise'
         },
@@ -107,7 +107,7 @@ export class HomeOneComponent implements OnInit {
             description1: 'Simplify management with industry-leading Mobile Device Management.',
             description2: 'Take control of every device—without leaving your desk.',
             description3: 'Secure, manage, and monitor Apple devices with advanced MDM integration.',
-            img: 'assets/images/mdm.png',
+            img: 'assets/images/mdm_banner1.png',
             alt: 'MDM Solutions',
             pageLink: '/mdm'
         },
