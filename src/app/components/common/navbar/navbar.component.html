@@ -110,7 +110,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a routerLink="/case-studies" class="nav-link dropdown-toggle" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}" (click)="toggleDropdown($event, $any($event.target).closest('.nav-item'))">Apple</a>
+                            <a href="javascript:void(0)" class="nav-link dropdown-toggle" (click)="toggleDropdown($event, $any($event.target).closest('.nav-item'))">Apple</a>
 
                             <ul class="dropdown-menu">
                                 <li class="nav-item"><a routerLink="/apple-enterprise" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}" (click)="closeMenu()">Why Apple for your enterprise?</a></li>
@@ -137,7 +137,7 @@
 
                                 <li class="nav-item"><a routerLink="/impetus" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}" (click)="closeMenu()">Impetus</a></li>
 
-                                <li class="nav-item"><a routerLink="/emp-purchase-program" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}" (click)="closeMenu()">Smart Employee Purchase Program</a></li>
+                                <li class="nav-item"><a routerLink="/emp-purchase-program" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}" (click)="closeMenu()">Employee Purchase Program</a></li>
                             </ul>
                         </li>
 
@@ -175,8 +175,9 @@
                                 <li class="nav-item"><a routerLink="/apple-ecosystem" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}" (click)="closeMenu()">Apple Ecosystem Consulting</a></li>
 
                                 <li class="nav-item"><a routerLink="/apple-program" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}" (click)="closeMenu()">Exclusive Apple Upgrade Programs</a></li>
+                                <!-- <li class="nav-item"><a routerLink="/" fragment="superior_digital" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}" (click)="closeMenu()">Why Choose superior digital</a></li> -->
 
-                                <li class="nav-item"><a routerLink="/" fragment="superior-packages" class="nav-link" routerLinkActive="active" (click)="closeMenu()">Superior packages for Enterprise</a></li>
+                                <li class="nav-item"><a routerLink="/" fragment="superior-packages" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" (click)="closeMenu()">Superior packages for Enterprise</a></li>
 
                                 <li class="nav-item"><a routerLink="/our-services" class="nav-link" routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}" (click)="closeMenu()">Services</a></li>
 

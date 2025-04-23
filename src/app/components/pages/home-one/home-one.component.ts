@@ -41,6 +41,11 @@ export class HomeOneComponent implements OnInit {
         'Airpods', 
         'Other Accessories', 
     ]; 
+    customerCount = 0;
+    partnerCount = 0;
+    deviceCount = 0;
+    projectCount = 0;
+    animationStarted = false;
     constructor(
         private fb: FormBuilder, 
         private http: HttpClient,
@@ -186,6 +191,67 @@ export class HomeOneComponent implements OnInit {
                 }
             });
         });
+        
+        // Add intersection observer for animation
+        this.setupIntersectionObserver();
+    }
+
+    setupIntersectionObserver() {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && !this.animationStarted) {
+                    this.animationStarted = true;
+                    this.startCountingAnimation();
+                }
+            });
+        });
+
+        const statsElement = document.querySelector('.stats-card');
+        if (statsElement) {
+            observer.observe(statsElement);
+        }
+    }
+
+    startCountingAnimation() {
+        const duration = 3000; // 3 seconds
+        const steps = 100;
+        const interval = duration / steps;
+
+        // Customer count
+        const customerStep = 1000 / steps;
+        const customerInterval = setInterval(() => {
+            this.customerCount = Math.min(Math.ceil(this.customerCount + customerStep), 1000);
+            if (this.customerCount >= 1000) {
+                clearInterval(customerInterval);
+            }
+        }, interval);
+
+        // Partner count
+        const partnerStep = 60 / steps;
+        const partnerInterval = setInterval(() => {
+            this.partnerCount = Math.min(Math.ceil(this.partnerCount + partnerStep), 60);
+            if (this.partnerCount >= 60) {
+                clearInterval(partnerInterval);
+            }
+        }, interval);
+
+        // Device count
+        const deviceStep = 300000 / steps;
+        const deviceInterval = setInterval(() => {
+            this.deviceCount = Math.min(Math.ceil(this.deviceCount + deviceStep), 300000);
+            if (this.deviceCount >= 300000) {
+                clearInterval(deviceInterval);
+            }
+        }, interval);
+
+        // Project count
+        const projectStep = 700 / steps;
+        const projectInterval = setInterval(() => {
+            this.projectCount = Math.min(Math.ceil(this.projectCount + projectStep), 700);
+            if (this.projectCount >= 700) {
+                clearInterval(projectInterval);
+            }
+        }, interval);
     }
 
     teamSlides: OwlOptions = {
