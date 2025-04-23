@@ -500,7 +500,7 @@
         background: linear-gradient(135deg, #f8f9fa, #ffffff);
         box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
         transform: translateY(-5px) scale(1.05);
-        border: 2px solid #ce202e;
+        // border: 2px solid #ce202e;
         z-index: 1;
         
         .card-icon {
@@ -526,7 +526,7 @@
 }
 
 .scroll-btn {
-    background: rgba(255, 255, 255, 0.9);
+    background: #ffffff4a;
     border: none;
     border-radius: 50%;
     width: 50px;
@@ -606,12 +606,16 @@
 }
 
 @media (max-width: 768px) {
+
+  .form-box{
+    padding: 20px !important;
+  }
     .cards-wrapper {
         padding: 0 50px;
     }
     
     .card {
-        min-width: 250px;
+        min-width: 230px;
     }
     
     .scroll-btn {
