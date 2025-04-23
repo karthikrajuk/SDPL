@@ -123,16 +123,16 @@ export class ProductsComponent implements OnInit {
         alt: 'Watch series 10',
         pageLink: '/apple-watch'
     },
-    {
-        id: 8,
-        title: 'AirPods Pro 2',
-        description1: 'H2. More immersive by every measure.',
-        description2: 'Intelligent noise control.',
-        description3: '',
-        img: 'assets/images/products/airpodspro2.png',
-        alt: 'AirPods Pro 2',
-        pageLink: '/airpods-max'
-    },
+    // {
+    //     id: 8,
+    //     title: 'AirPods Pro 2',
+    //     description1: 'H2. More immersive by every measure.',
+    //     description2: 'Intelligent noise control.',
+    //     description3: '',
+    //     img: 'assets/images/products/airpodspro2.png',
+    //     alt: 'AirPods Pro 2',
+    //     pageLink: '/airpods-max'
+    // },
     {
         id: 9,
         title: 'iMac',
