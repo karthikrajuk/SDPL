@@ -89,6 +89,182 @@
 
 </section>
 
+<style>
+.superior-container {
+    display: flex;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.text-section {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.text-section h4 {
+    color: var(--mainColor);
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.text-section h1 {
+    font-size: 36px;
+    line-height: 1.3;
+    margin-bottom: 20px;
+    color: #293a5c;
+}
+
+.text-section p {
+    color: #7a7e9a;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.text-section .subtext {
+    font-weight: 600;
+    color: #293a5c;
+}
+
+.image-section {
+    flex: 1;
+    position: relative;
+    margin-top: 10%;
+}
+
+.office-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.stats-card {
+    position: absolute;
+    bottom: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #ffffff6e;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    width: 90%;
+    max-width: 500px;
+}
+
+.stats-card h3 {
+    color: #ea4747de;
+    font-weight: 200;
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    text-align: center;
+}
+
+.stat-number {
+    font-size: 24px;
+    font-weight: 700;
+    color: #293a5c;
+    margin-bottom: 5px;
+}
+
+.stat-number-text {
+    font-size: 14px;
+    color: #7a7e9a;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .superior-container {
+        max-width: 1000px;
+    }
+    
+    .text-section h1 {
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 991px) {
+    .superior-container {
+        flex-direction: column;
+        gap: 60px;
+    }
+    
+    .text-section {
+        padding-right: 0;
+    }
+    
+    .image-section {
+        margin-top: 20px;
+    }
+    
+    .stats-card {
+        position: relative;
+        bottom: 0;
+        margin: -50% 0px 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .superior-container {
+        padding: 0 15px;
+    }
+    
+    .text-section h1 {
+        font-size: 28px;
+    }
+    
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .stats-card {
+        padding: 20px;
+    }
+    
+    .stat-number {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .text-section h1 {
+        font-size: 24px;
+    }
+    
+    .text-section h4 {
+        font-size: 16px;
+    }
+    
+    .text-section p {
+        font-size: 14px;
+    }
+    
+    .stats-card h3 {
+        font-size: 18px;
+    }
+    
+    .stats-grid {
+        gap: 10px;
+    }
+    
+    .stat-number {
+        font-size: 18px;
+    }
+    
+    .stat-number-text {
+        font-size: 12px;
+    }
+}
+</style>
+
 <section class="services-section">
     <div class="services-intro">    
         <div class="intro-content">
@@ -328,7 +504,7 @@
                         <li><i class="bx bx-badge-check"></i> Basic MDM setup (e.g., Jamf or Mosyle) for device configuration and app distribution.</li>
                         <li><i class="bx bx-badge-check"></i> Core security settings (passcode policies, encryption).</li>
                         <li><i class="bx bx-badge-check"></i> Virtual onboarding training on macOS, iOS, and iPadOS for IT admins and end-users.</li>
-                        <li><i class="bx bx-badge-check"></i> Access to Superior’s financing options for cost-effective device procurement.</li>
+                        <li><i class="bx bx-badge-check"></i> Access to Superior's financing options for cost-effective device procurement.</li>
                         <li><i class="bx bx-badge-check"></i> 24/7 email and phone support for initial deployment.</li>
                         <li><i class="bx bx-badge-check"></i>  Onsite device support in 25 locations across India.</li>
                         <li><i class="bx bx-badge-check"></i> Include Training on Mac Os, iOS, Pad Os.</li>
@@ -392,8 +568,8 @@
                         <p>Features</p>
                         <li style="color: red;"><i class="bx bx-badge-check"></i>Includes all features of Superior Pro</li>
                         <li><i class="bx bx-badge-check"></i> Fully customized ABM and MDM deployment with role-based profiles.</li>
-                        <li><i class="bx bx-badge-check"></i> Custom app integration or development via Superior’s network.</li>
-                        <li><i class="bx bx-badge-check"></i> Custom app integration or development via Superior’s network.</li>
+                        <li><i class="bx bx-badge-check"></i> Custom app integration or development via Superior's network.</li>
+                        <li><i class="bx bx-badge-check"></i> Custom app integration or development via Superior's network.</li>
                         <li><i class="bx bx-badge-check"></i> On-site deployment support across multiple India locations.</li>
                         <li><i class="bx bx-badge-check"></i> Comprehensive training on macOS, iOS, and iPadOS, plus ongoing workshops.</li>
                         <li><i class="bx bx-badge-check"></i> Premium 24/7 support with SLA-backed response times and lifecycle management.</li>
