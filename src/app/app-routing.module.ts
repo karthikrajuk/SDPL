@@ -79,6 +79,8 @@ import { ITStrategyComponent } from './components/pages/it-strategy/it-strategy.
 import { IpadProComponent } from './components/pages/ipad-pro/ipad-pro.component';
 import { IpadA16Component } from './components/pages/ipad-a16/ipad-a16.component';
 import { AppleUpgradeComponent } from './components/pages/apple-upgrade/apple-upgrade.component';
+import { ImacComponent } from './components/pages/imac/imac.component'; 
+import { MacMiniComponent } from './components/pages/mac-mini/mac-mini.component';
 
 const routes: Routes = [
     {path: '', component: HomeOneComponent},
@@ -160,7 +162,8 @@ const routes: Routes = [
     {path: 'ipad-pro', component: IpadProComponent},
     {path: 'ipad-a16', component: IpadA16Component},
     {path: 'apple-upgrade', component: AppleUpgradeComponent},
-    
+    {path: 'imac', component: ImacComponent},
+    {path: 'mac-mini', component: MacMiniComponent},
     // Here add new pages component
 
     {path: '**', component: ErrorComponent} // This line will remain down from the whole pages component list
