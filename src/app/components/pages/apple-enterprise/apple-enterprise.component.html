@@ -19,17 +19,41 @@
             <h2>Apple Device for Enterprise</h2>
         </div>
     </div>
-
-  <!--   <div class="page-shape">
-        <div class="shape1"><img src="assets/images/shape/1.png" alt="shape" /></div>
-        <div class="shape3"><img src="assets/images/shape/3.png" alt="shape" /></div>
-        <div class="shape4"><img src="assets/images/shape/4.png" alt="shape" /></div>
-        <div class="shape5"><img src="assets/images/shape/5.png" alt="shape" /></div>
-        <div class="shape6"><img src="assets/images/shape/6.png" alt="shape" /></div>
-    </div> -->
 </div>
 
-<section class="animated-cards-section ptb-100">
+<section class="services-details-area pb-100">
+    <div class="scrives-item-2 mt-5">
+            <h2 style="padding-left: 50px; text-align: center;">Device for Enterprise</h2>
+            <br>
+            <div class="contact-container">
+                <div class="form-box">
+                    <div class="form-left">
+                        <div class="cards-wrapper">
+                            <button class="scroll-btn left" (click)="scrollCards('left')">
+                                <i class="fas fa-chevron-left"></i>
+                            </button>
+                            <div class="cards-container" #cardsContainer
+                                (mouseenter)="onMouseEnter()"
+                                (mouseleave)="onMouseLeave()">
+                                <div class="card" *ngFor="let card of cards; let i = index"
+                                    [class.active]="i === activeIndex">
+                                    <div class="card-icon">
+                                        <i [class]="card.icon"></i>
+                                    </div>
+                                    <h1 style="font-size: 20px; font-weight: bold; text-align: center;">{{ card.title }}</h1>
+                                    <p>{{ card.description }}</p>
+                                </div>
+                            </div>
+                            <button class="scroll-btn right" (click)="scrollCards('right')">
+                                <i class="fas fa-chevron-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+</section>
+<!-- <section class="animated-cards-section ptb-100">
     <div class="container">
         <div class="row">
             <div class="col-lg-4 col-md-6">
@@ -64,7 +88,7 @@
             </div>
         </div>
     </div>
-</section>
+</section> -->
 
 <!-- <section class="services-details-area ptb-100">
     <div class="container">
