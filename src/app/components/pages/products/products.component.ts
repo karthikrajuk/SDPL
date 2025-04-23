@@ -51,7 +51,7 @@ export class ProductsComponent implements OnInit {
         description3: '',
         img: 'assets/images/products/macbook-pro.jpg',
         alt: 'MacBook Pro',
-        pageLink: '/apple-devices-for-enterprise'
+        pageLink: '/macbook-pro'
     },
     {
         id: 2,
@@ -59,9 +59,9 @@ export class ProductsComponent implements OnInit {
         description1: 'Sky blue colour.',
         description2: 'Built for Apple Intelligence.',
         description3: 'Sky high performance with M4',
-        img: 'assets/images/products/macbook-air.jpg',
+        img: 'assets/images/products/mac-air.png',
         alt: 'MacBook Air',
-        pageLink: '/mdm-solutions'
+        pageLink: '/macbook-air'
     },
     {
         id: 3,
@@ -69,9 +69,9 @@ export class ProductsComponent implements OnInit {
         description1: 'All‑new ultra-compact design.',
         description2: 'Front and back ports.',
         description3: 'Fits, flexes and flies in any setup.',            
-        img: 'assets/images/products/mac-mini.jpg',
+        img: 'assets/images/products/mini.png',
         alt: 'Mac Mini',
-        pageLink: '/audio-video-setup'
+        pageLink: '/mac-mini'
     },
     /* {
         id: 4,
@@ -89,9 +89,9 @@ export class ProductsComponent implements OnInit {
         description1: 'The ultimate iPhone.',
         description2: 'The first iPhone designed for Apple Intelligence.',
         description3: 'Personal, private, powerful.1',            
-        img: 'assets/images/products/iphone16.jpg',
+        img: 'assets/images/products/16.png',
         alt: 'iPhone 16',
-        pageLink: '/mobility'
+        pageLink: '/iphone-16'
     },
     {
         id: 5,
@@ -99,9 +99,9 @@ export class ProductsComponent implements OnInit {
         description1: 'The ultimate iPhone.',
         description2: 'The first iPhone designed for Apple Intelligence.',
         description3: 'Personal, private, powerful.1', 
-        img: 'assets/images/products/iphone16-pro.jpg',
+        img: 'assets/images/products/16pro.png',
         alt: 'iPhone 16-Pro',
-        pageLink: '/leasing-services'
+        pageLink: '/iphone-16pro'
     },
     {
         id: 6,
@@ -109,9 +109,9 @@ export class ProductsComponent implements OnInit {
         description1: 'Supersized battery life.',
         description2: 'Beautiful, durable design.',
         description3: 'Built to last',
-        img: 'assets/images/products/Apple-iPhone-16e.jpg',
+        img: 'assets/images/products/16e.png',
         alt: 'Apple iPhone 16e',
-        pageLink: '/financing-solutions'
+        pageLink: '/iphone-16e'
     },
     {
         id: 7,
@@ -121,7 +121,7 @@ export class ProductsComponent implements OnInit {
         description3: 'Health insights for days. And nights.',
         img: 'assets/images/products/watch10.jpg',
         alt: 'Watch series 10',
-        pageLink: '/financing-solutions'
+        pageLink: '/apple-watch'
     },
     {
         id: 8,
@@ -131,7 +131,7 @@ export class ProductsComponent implements OnInit {
         description3: '',
         img: 'assets/images/products/airpodspro2.png',
         alt: 'AirPods Pro 2',
-        pageLink: '/financing-solutions'
+        pageLink: '/airpods-max'
     },
     {
         id: 9,
@@ -141,7 +141,7 @@ export class ProductsComponent implements OnInit {
         description3: '',
         img: 'assets/images/products/imac.jpeg',
         alt: 'AirPods Pro 2',
-        pageLink: '/financing-solutions'
+        pageLink: '/imac'
     },
     {
         id: 10,
@@ -151,7 +151,7 @@ export class ProductsComponent implements OnInit {
         description3: '',
         img: 'assets/images/products/ipad.jpeg',
         alt: 'iPad',
-        pageLink: '/financing-solutions'
+        pageLink: '/ipad-a16'
     },
     {
         id: 11,
@@ -159,9 +159,9 @@ export class ProductsComponent implements OnInit {
         description1: 'Featuring the powerful Apple M3 chip.',
         description2: 'Two sizes. Infinite possibilities.',
         description3: '',
-        img: 'assets/images/products/ipad-air.jpeg',
+        img: 'assets/images/products/air.png',
         alt: 'iPad Air',
-        pageLink: '/financing-solutions'
+        pageLink: '/ipad-air'
     },
     {
         id: 12,
@@ -169,9 +169,9 @@ export class ProductsComponent implements OnInit {
         description1: 'The thinnest Apple product ever.',
         description2: 'Ultra Retina XDR.',
         description3: 'Thrill. Sleeker.',
-        img: 'assets/images/products/ipad-pro.jpeg',
+        img: 'assets/images/products/pro.png',
         alt: 'iPad Pro',
-        pageLink: '/financing-solutions'
+        pageLink: '/ipad-pro'
     },
    
 ];
