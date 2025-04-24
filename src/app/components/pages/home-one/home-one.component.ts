@@ -117,7 +117,7 @@ export class HomeOneComponent implements OnInit {
             description1: 'Transform your spaces with professional AV solutions for clear communication.',
             description2: 'Make every meeting look and sound amazing.',
             description3: 'Smart AV integrations for seamless presentations and hybrid collaboration.',            
-            img: 'assets/images/AVsol1.jpeg',
+            img: 'assets/images/avsetup_banner_new.png',
             alt: 'Audio Video Setup',
             pageLink: '/avsolution'
         },
@@ -137,7 +137,7 @@ export class HomeOneComponent implements OnInit {
             description1: 'Enable secure and seamless mobile workforces with Apple mobility solutions.',
             description2: 'Work from anywhere—securely and efficiently.',
             description3: 'Drive productivity on the move with mobile-first Apple ecosystem strategies.',            
-            img: 'assets/images/mobilitybanner.png',
+            img: 'assets/images/mobility_banner_new.jpeg',
             alt: 'Mobility',
             pageLink: '/mobility'
         },
@@ -147,7 +147,7 @@ export class HomeOneComponent implements OnInit {
             description1: 'Flexible leasing plans to equip your teams without upfront investment.',
             description2: 'Upgrade without the upfront cost—lease the latest tech today.',
             description3: 'Scalable leasing models to stay future-ready and financially agile.',
-            img: 'assets/images/leasing.png',
+            img: 'assets/images/leasing_banner_new.jpeg',
             alt: 'Leasing Services',
             pageLink: '/leasing'
         },
@@ -157,7 +157,7 @@ export class HomeOneComponent implements OnInit {
             description1: 'Finance your Apple ecosystem with custom plans that fit your budget.',
             description2: 'Get the tech you need—pay the way that works for you.',
             description3: 'Smart financing options for seamless IT expansion and upgrades.',
-            img: 'assets/images/financing.png',
+            img: 'assets/images/financing_banner_new.jpeg',
             alt: 'Financing Solutions',
             pageLink: '/apple-financing'
         }
